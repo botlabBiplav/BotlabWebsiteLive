@@ -4,6 +4,7 @@ import linkedinIcon from "../../../../Images/Icons/linkedin.svg";
 import twitterIcon from "../../../../Images/Icons/twitter.svg";
 import websitelogo from "../../../../Images/Logos/wordmarkWhite.png";
 import youtubeIcon from "../../../../Images/Icons/youtube.svg";
+import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
@@ -87,7 +88,7 @@ const Footer = () => {
           <div className="flex justify-center">
             <ul className="text-white lg:text-xl text-xs ml-5 flex flex-col justify-between">
               <li className="">
-                <a href='/ContactUs'><h1>Contact Us</h1></a>
+                <Link href='/ContactUs'><h1>Contact Us</h1></Link>
               </li>
               {/* <li className="">
                                 <h1>Privacy Policy</h1>
