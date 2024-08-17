@@ -18,7 +18,7 @@ import {
 const Testimonials = () => {
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: false })
+    Autoplay({ delay: 4500, stopOnInteraction: false })
   );
 
   // const { data, loading, error } = UseGetRequest(endpointData.testimonials);
@@ -40,8 +40,6 @@ const Testimonials = () => {
           <Carousel
             plugins={[plugin.current]}
             className="w-full"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.play}
           >
             <CarouselContent type={"ClientUI"}>
 

@@ -15,7 +15,6 @@ import Animation from "./Home/Animation";
 import dynamic from "next/dynamic";
 import DatePicked from "../components/Form/DatePicked";
 import axios from "axios";
-import videodata from "../../../Images/Image/botlab.webm";
 import header from "./Home/HeaderBar";
 import HeaderBar from "./Home/HeaderBar";
 import ContactUs from "../../../pages/ContactUs";
