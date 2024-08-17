@@ -29,7 +29,7 @@ const Testimonials = () => {
   // console.log(data, "dataGGT");
   return (
     <>
-      <div className="py-20 ">
+      <div className="pt-40">
         <div>
           {/* <h1 className="text-center text-white lg:text-6xl text-4xl font-lexend">
             WHAT PEOPLE SAY ABOUT US

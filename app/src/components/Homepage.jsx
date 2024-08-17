@@ -82,7 +82,8 @@ const Homepage = () => {
             
             <Events />
             <Showreel />
-            <BiggestDroneShow />
+            <div className="bg-gradient-to-t from-black via-transparent">
+            <BiggestDroneShow /></div>
             {/* <DroneType />
             <Services /> */}
             <Animation />
