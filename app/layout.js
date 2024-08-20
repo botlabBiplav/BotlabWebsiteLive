@@ -25,7 +25,13 @@ export default function RootLayout({ children }) {
   }, []);
   return (
     <html lang="en">
-      <body className={inter.className}><div className="fixed w-full z-50"><HeaderBar /></div> 
+      <head>
+        <title>
+          BotLab Dynamics | India's Leading Drone Show Company
+        </title>
+        
+      </head>
+      <body className={inter.className}><div className="fixed w-full inset-0 h-screen z-[150]"><HeaderBar /></div> 
       
       <main>{children}</main>
         {

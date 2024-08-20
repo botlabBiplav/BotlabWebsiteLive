@@ -80,20 +80,15 @@ const Homepage = () => {
             
             
             <Events />
-            <Showreel />
+            <Showreel />  
             <div className="bg-gradient-to-t from-black via-transparent">
             <BiggestDroneShow /></div>
-            {/* <DroneType />
-            <Services /> */}
             <Animation />
-            {/* <Social /> */}
             <div className= "bg-black" >
               <Testimonials />
               <Client />
               <Form />
             </div>
-            {/* <Server /> */}
-            {/* <DatePicked /> */}
           </>
         ) : (
           ""
