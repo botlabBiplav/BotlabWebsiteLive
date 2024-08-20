@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>
-          BotLab Dynamics | India's Leading Drone Show Company
+          BotLab Dynamics | India&apos;s Leading Drone Show Company
         </title>
         
       </head>
