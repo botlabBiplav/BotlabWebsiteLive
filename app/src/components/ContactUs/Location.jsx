@@ -11,8 +11,8 @@ const Location = () => {
             <p className="px-10 font-lexend text-6xl ">Contact Us</p>
           <p className="px-10 font-lato text-3xl font-light w-2/3">
           <br/><br/>
-          Want to dazzle your guests with a show that’s out of this world? <br/><br/>
-          Whether you have a vision for hosting the coolest drone show ever or just have a burning question, we’re ready to make your vision fly!<br/>&nbsp;
+          Want to dazzle your guests with a show that&apos;s out of this world? <br/><br/>
+          Whether you have a vision for hosting the coolest drone show ever or just have a burning question, we&apos;re ready to make your vision fly!<br/>&nbsp;
           </p>
         </div>
         <div className="px-60 flex w-full justify-between">
