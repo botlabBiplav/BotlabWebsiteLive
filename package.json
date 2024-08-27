@@ -36,7 +36,8 @@
     "simple-parallax-js": "^6.0.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "tailwindcss-animated": "^1.1.2"
+    "tailwindcss-animated": "^1.1.2",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@types/node": "20.14.9",

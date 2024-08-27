@@ -31,13 +31,13 @@ export default function RootLayout({ children }) {
         </title>
         
       </head>
-      <body className={inter.className}><div className="fixed w-full inset-0 h-screen z-[150]"><HeaderBar /></div> 
+      <body className={inter.className}><div className="fixed w-full sm:h-0 inset-0 h-screen z-[150]"><HeaderBar /></div> 
       
       <main>{children}</main>
-        {
-          footerDelay && 
+        {/* {
+          footerDelay &&  */}
         <Footer />
-        }
+        {/* } */}
       </body>
     </html>
   );

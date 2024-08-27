@@ -12,7 +12,7 @@ const HeaderBar = () => {
   };
 
   return (
-    <nav className="px-4 py-2 bg-gradient-to-r from-black/50 via-black/50 via-25% to-[#8409FF]/50 backdrop-blur w-screen">
+    <nav className="px-4 py-2 bg-black/75 backdrop-blur w-screen">
       <div className="container mx-auto my-2 flex justify-between items-center">
         <Link href="/" className="text-white text-2xl font-bold">
           <Image

@@ -75,7 +75,7 @@ const Homepage = () => {
         </div> */}
         <Herocard />
         <StoryPage />
-        {landingPageLoaded ? (
+        {/* {landingPageLoaded ? ( */}
           <>
             
             
@@ -90,9 +90,9 @@ const Homepage = () => {
               <Form />
             </div>
           </>
-        ) : (
+        {/* ) : (
           ""
-        )}
+        )} */}
       </div>
     </div>
       {/* <Creative /> */}
