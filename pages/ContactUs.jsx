@@ -48,7 +48,7 @@ const ContactUs = () => {
         <div className=" bg-gradient-to-t from-black via-black">
           {/* <ServerGet /> */}
           
-          <div className="fixed w-full z-10"><HeaderBar /></div>  
+          <div className="fixed z-10"><HeaderBar /></div>  
               <Location/>
               <div className="pt-10"><Form /></div>
               {/* <Server /> */}

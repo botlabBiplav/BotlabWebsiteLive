@@ -1,11 +1,11 @@
   import React, { useState, useEffect }  from "react";
-  import videodata from "../../../../Images/Image/botlab.webm";
+  import videodata from "../../../../Images/Image/herosectionbackground.webm";
 import endpointData from "../../../api/endpointData";
 import useGetRequest from "../../../api/UseGetRequest";
 
 
 const Herocard = () => {
-  const words = ["Storytelling", "Entertainment", "Advertising",];
+  const words = ["Storytelling", "Entertainment", "Advertising"];
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -101,12 +101,12 @@ const Herocard = () => {
 <div className='relative h-screen w-full overflow-hidden bg-transparent'>
     <video src={videodata} autoPlay muted loop disablePictureInPicture className='absolute top-0 left-0 min-w-full min-h-full object-cover z-0'/>
     
-    <div className='relative z-10 flex flex-col justify-end pb-8 lg:pl-80 md:pl-10 items-left h-full'>
+    <div className='relative z-10 flex flex-col sm:justify-end justify-center md:pb-8 sm:max-lg:pl-20 lg:pl-80 px-10 sm:items-start items-center h-full'>
         {/* Your content goes here */}
-        <div className='text-left text-white'>
-            <h1 className="text-white text-7xl pb-4 font-lexend">
+        <div className='sm:text-left text-center text-white'>
+            <h1 className="text-white sm:text-7xl pb-4 text-4xl font-lexend sm:w-auto">
                 THE NEW ERA OF
-                <br/> <p id="typewriter" className="font-golden-hopes text-[13rem] text-[#8409FF]">{text}&nbsp;</p>
+                <br/> <p id="typewriter" className="font-golden-hopes sm:text-[13rem] text-7xl sm:text-[#8409FF]">{text}&nbsp;</p>
             </h1>
             {/* <p className='mt-5 text-4xl font-lato-light tracking-widest'>THE STARS SPEAK YOUR STORY</p> */}
         </div>

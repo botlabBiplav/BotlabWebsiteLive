@@ -15,7 +15,6 @@ import Animation from "./Home/Animation";
 import dynamic from "next/dynamic";
 import DatePicked from "../components/Form/DatePicked";
 import axios from "axios";
-import videodata from "../../../Images/Image/botlab.webm";
 import header from "./Home/HeaderBar";
 import HeaderBar from "./Home/HeaderBar";
 import ContactUs from "../../../pages/ContactUs";
@@ -76,28 +75,24 @@ const Homepage = () => {
         </div> */}
         <Herocard />
         <StoryPage />
-        {landingPageLoaded ? (
+        {/* {landingPageLoaded ? ( */}
           <>
             
             
             <Events />
-            <Showreel />
-            <BiggestDroneShow />
-            {/* <DroneType />
-            <Services /> */}
+            <Showreel />  
+            <div className="bg-gradient-to-t from-black via-transparent">
+            <BiggestDroneShow /></div>
             <Animation />
-            {/* <Social /> */}
             <div className= "bg-black" >
               <Testimonials />
               <Client />
               <Form />
             </div>
-            {/* <Server /> */}
-            {/* <DatePicked /> */}
           </>
-        ) : (
+        {/* ) : (
           ""
-        )}
+        )} */}
       </div>
     </div>
       {/* <Creative /> */}

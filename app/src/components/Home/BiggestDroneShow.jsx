@@ -8,10 +8,10 @@ const BiggestDroneShow = () => {
         <div className="flex align-center justify-center">
             <div className="flex-row text-center">
                 <p className="text-6xl font-lexend pb-5">
-                    The World's  <span className="font-golden-hopes text-8xl align-middle text-[#8409FF]"> Biggest </span> Drone Show    
+                    The World&apos;s  <span className="font-golden-hopes text-8xl align-middle text-[#8409FF]"> Biggest </span> Drone Show    
                 </p> 
                 <p className="text-2xl font-lato font-light pb-20">
-                    Watch Nakshatra - a 4 part series on how we created the World's Biggest Drone show earlier this year<br/> during Anant Ambani and Radhika Merchant's Pre-wedding celebrations
+                    Watch Nakshatra - a 4 part series on how we created the World&apos;s Biggest Drone show earlier this year<br/> during Anant Ambani and Radhika Merchant&apos;s Pre-wedding celebrations
                 </p>
             </div>
         </div>

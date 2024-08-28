@@ -49,10 +49,11 @@ const Animation = () => {
     };
   }, []);
   return (
-    <div className=" h-full bg-black text-white">
+    <div className=" h-full bg-black text-white pl-80">
 
     <div className="relative">
       <div className="">
+        <div className="w-auto ml-80 pt-20 top-[0%]">
         <video
           id="video"
           ref={videoRef}
@@ -63,10 +64,11 @@ const Animation = () => {
           loop
           disablePictureInPicture
         />
+        </div>
         <div
           id="projectionvid"
           ref={videoContainerProjectionRef}
-          className="cardanimation absolute top-[0%]"
+          className="cardanimation absolute w-auto ml-80 pt-20 top-[0%]"
         >
           <video
             id="video"
@@ -81,7 +83,7 @@ const Animation = () => {
         <div
           id="fireworksvid"
           ref={videoContainerFireworksRef}
-          className="cardanimation absolute top-[0%]"
+          className="cardanimation absolute w-auto ml-80 pt-20 top-[0%]"
         >
           <video
             id="video"
@@ -96,7 +98,7 @@ const Animation = () => {
         <div
           id="laservid"
           ref={videoContainerLaserRef}
-          className="cardanimation absolute top-0 "
+          className="cardanimation absolute w-auto ml-80 pt-20 top-0 "
         >
           <video
             id="video"
@@ -113,23 +115,23 @@ const Animation = () => {
             <div className="w-[500px] text-center flex justify-center">
                 <div>
 
-<div className="flex justify-center">
+<div className="flex justify-start">
 
-            <h1 className="text-4xl w-[200px]  text-center font-bold mr-10 font-golden-hopes">
-              Experience Integration
+            <h1 className="text-3xl w-auto mt-20 text-left font-light font-lexend">
+              <span className="font-golden-hopes text-6xl align-top">Experience Integration</span>
             </h1>
 </div>
           
           
-          <p className="w-96 text-xl text-center xl:my-20 lg:my-10 ">
+          <p className="w-96 text-xl text-left font-lato xl:my-20 lg:my-10">
             Our Team of creative and seasoned artists is capable of integrating
             drone show design with several other experiential media to create
             moments that will forever be etched in the memories of the audience
           </p>
 
-          <div className="flex justify-center">
+          <div className="flex justify-start text-black">
             <label className="">
-              <div className="xl:w-28 w-24 min-h-24 xl:min-h-28 rounded-md border-2 border-[#b5bfd9] bg-white shadow-lg shadow-black/10 transition duration-150 ease-in cursor-pointer relative mt-6">
+              <div className="xl:w-28 w-24 min-h-24 xl:min-h-28 rounded-md border-2 border-[#b5bfd9] bg-white shadow-lg shadow-black/10 transition duration-150 ease-in cursor-pointer relative mr-2 my-2">
                
   <input
                   type="checkbox"
@@ -137,11 +139,11 @@ const Animation = () => {
                   class="rounded-md border-gray-300 m-2"
                   ref={checkboxLaserRef}
                 />
-                <p className="mt-10 text-center"> Fireworks</p>
+                <p className="mt-10 text-center"> Laser</p>
               </div>
             </label>
             <label className="">
-              <div className="xl:w-28 w-24 min-h-24 xl:min-h-28 rounded-md border-2 border-[#b5bfd9] bg-white shadow-lg shadow-black/10 transition duration-150 ease-in cursor-pointer relative m-6">
+              <div className="xl:w-28 w-24 min-h-24 xl:min-h-28 rounded-md border-2 border-[#b5bfd9] bg-white shadow-lg shadow-black/10 transition duration-150 ease-in cursor-pointer relative m-2">
                
                 <input
                   type="checkbox"
@@ -150,12 +152,12 @@ const Animation = () => {
                   className="m-2"
                 />
 
-                <p className="mt-10 text-center"> Projection</p>
+                <p className="mt-10 text-center"> Fireworks</p>
               </div>
             </label>
 
             <label className="">
-              <div className="xl:w-28 w-24 min-h-24 xl:min-h-28 rounded-md border-2 border-[#b5bfd9] bg-white shadow-lg shadow-black/10 transition duration-150 ease-in cursor-pointer relative m-6">
+              <div className="xl:w-28 w-24 min-h-24 xl:min-h-28 rounded-md border-2 border-[#b5bfd9] bg-white shadow-lg shadow-black/10 transition duration-150 ease-in cursor-pointer relative m-2">
               <input
                   type="checkbox"
                   id="projection"
@@ -163,7 +165,7 @@ const Animation = () => {
                   className="m-2"
                 />
 
-                <p className="mt-10 text-center"> Laser</p>
+                <p className="mt-10 text-center"> 3D Projection</p>
               </div>
             </label>
           </div>
