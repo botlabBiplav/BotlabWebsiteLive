@@ -9,16 +9,16 @@ import PrivacyPolicyBody from "../app/src/components/Privacy Policy/policybody";
 
 const PrivacyPolicy = () => {
   return (
-  
-  <div className="z-10">
-        <Background />
-        
-        <div className="fixed z-10"><HeaderBar /></div>
-        <div className="py-32 sm:px-80 bg-gradient-to-t from-black via-transparent via-12%">
-            <PrivacyPolicyBody/>
+
+    <div className="z-10">
+      <Background />
+
+      <div className="fixed z-10"><HeaderBar /></div>
+      <div className="py-32 sm:px-80 bg-gradient-to-t from-black via-transparent via-12%">
+        <PrivacyPolicyBody />
+      </div>
+      <Footer />
     </div>
-<Footer/>
-</div>
   );
 };
 

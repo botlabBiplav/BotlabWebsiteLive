@@ -35,8 +35,8 @@ const HeaderBar = () => {
         </div>
         {/* Menu Overlay */}
         <div className={`fixed inset-0 h-screen bg-black/90 z-40 transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out lg:hidden`}>
-          
-            <ul className="flex pt-40 flex-col items-center justify-start h-auto space-y-6">
+
+          <ul className="flex pt-40 flex-col items-center justify-start h-auto space-y-6">
             <li className={`opacity-0 transform ${menuOpen ? 'opacity-100 translate-x-0 delay-150' : 'translate-x-10'} transition-all duration-200`}>
               <Link href="/" className="font-lexend text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,100)]">
                 HOME

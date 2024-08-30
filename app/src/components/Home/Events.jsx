@@ -29,7 +29,7 @@ const Events = () => {
         <div className="  lg:h-[500px]">
           <div className="flex sm:flex-row flex-col ">
             <div className="mt-20">
-            {
+              {
                 EventData.map((item, index) => (<>
                   <div className=''>
                     {/* <div className='w-40 border-l  leading-3 border-white'>
@@ -89,7 +89,7 @@ d
                 </>
               ))} */}
 
-{
+              {
                 EventData.map((item, index) => (<>
                   <div>
                     {

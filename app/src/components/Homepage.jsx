@@ -19,6 +19,7 @@ import header from "./Home/HeaderBar";
 import HeaderBar from "./Home/HeaderBar";
 import ContactUs from "../../../pages/ContactUs";
 import Herocard from "./Home/Herocard";
+// import Portfolio from "./Home/Portfolio";
 import Showreel from "./Home/Showreel";
 import BiggestDroneShow from "./Home/BiggestDroneShow";
 
@@ -64,37 +65,39 @@ const Homepage = () => {
 
   return (
     <>
-    <div className="z-10">
-      <Background />
-      <div>
-        {/* <ServerGet /> */}
-        
-        
-        {/* <div>
+      <div className="z-10">
+        <Background />
+        <div>
+          {/* <ServerGet /> */}
+
+
+          {/* <div>
         <LandingPage />
         </div> */}
-        <Herocard />
-        <StoryPage />
-        {/* {landingPageLoaded ? ( */}
+          <Herocard />
+          <StoryPage /> 
+          {/* <Portfolio /> */}
+
+          {/* {landingPageLoaded ? ( */}
           <>
-            
-            
+
+
             <Events />
-            <Showreel />  
+            <Showreel />
             <div className="bg-gradient-to-t from-black via-transparent">
-            <BiggestDroneShow /></div>
+              <BiggestDroneShow /></div>
             <Animation />
-            <div className= "bg-black" >
+            <div className="bg-black" >
               <Testimonials />
               <Client />
               <Form />
             </div>
           </>
-        {/* ) : (
+          {/* ) : (
           ""
         )} */}
+        </div>
       </div>
-    </div>
       {/* <Creative /> */}
     </>
   );
