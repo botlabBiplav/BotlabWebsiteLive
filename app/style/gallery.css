@@ -1,0 +1,28 @@
+.gallery-item{
+    /* margin: 20px; */
+}
+.card{
+    width: 800px !important;
+    background-color: black;
+    height: 400px;
+
+}
+.container{
+    background-color: black;
+    width: 1000px;
+    position: relative;
+    height: 500px;
+
+}
+.card1{
+    position: absolute;
+}
+.card2{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+.card3{
+    position: absolute;
+    bottom: 1px;
+}

@@ -1,6 +1,6 @@
 import droneImg from "../../Images/Image/services.svg";
 
-const AbhinandanData = [
+const data = [
   {
     Title: "The House of Abhinandan Lodha",
     subtitle: "Lighting Up a Global Campaign with an Integrated Drone Show",
