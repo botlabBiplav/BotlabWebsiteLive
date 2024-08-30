@@ -4,23 +4,24 @@ import linkedinIcon from "../../../../Images/Icons/linkedin.svg";
 import twitterIcon from "../../../../Images/Icons/twitter.svg";
 import websitelogo from "../../../../Images/Logos/wordmarkWhite.png";
 import youtubeIcon from "../../../../Images/Icons/youtube.svg";
+import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-black font-light font-lexend px-40">
-      <div className="mx-auto w-full opacity-55">
-        <div className="pt-20 grid grid-cols-3 gap-4 px-4 py-2 lg:py-8 md:grid-cols-3 divide-x-[1px] divide-gray-500 ">
-          <div className=" flex items-center justify-center ">
+    <footer className="bg-black font-light font-lexend sm:px-40">
+      <div className="sm:mx-auto w-full opacity-55">
+        <div className="sm:pt-20 grid sm:grid-cols-3 gap-4 sm:px-4 px-12 sm:py-2 lg:py-8 py-12 md:grid-cols-3 sm:divide-x-[1px] divide-gray-500">
+          <div className="flex items-center sm:justify-center ">
             <div className="text-white">
               <Image
-                className="lg:w-[300px] w-[100px]"
+                className="lg:w-[300px] w-[200px]"
                 width={300}
                 height={200}
                 src={websitelogo}
                 alt="BotLab Dynamics Logo"
               />
-              <span className="flex mt-2  justify-between">
+              <span className="flex mt-2 w-[200px] justify-between">
                 <a href=''><Image
                   className=""
                   width={25}
@@ -57,15 +58,15 @@ const Footer = () => {
                   alt="youtube icon"
                 />
               </span>
-              <p className="mt-3 lg:text-xl text-xs">
-                &copy; botlab dynamics pvt. ltd. 2024
+              <p className="mt-3 lg:text-xl text-sm">
+                &copy; BotLab Dynamics Pvt. Ltd. 2024
               </p>
             </div>
           </div>
-          <div className="flex justify-center">
-            <ul className="text-white ml-5 flex flex-col justify-between gap-8">
+          <div className="flex sm:justify-center">
+            <ul className="text-white sm:ml-5 flex flex-col justify-between gap-8">
               <li className="">
-                <p className=" lg:text-xl text-xs">
+                <p className=" lg:text-xl text-sm">
                   5C1, Research and Innovation Park,
                   <br />
                   Indian Institute of Technology, Hauz Khas,
@@ -74,7 +75,7 @@ const Footer = () => {
                 </p>
               </li>
               <li className="">
-                <p className=" lg:text-xl text-xs">
+                <p className=" lg:text-xl text-sm">
                   E115, Okhla Phase III Road,
                   <br />
                   Okhla Phase III, Okhla Industrial Estate,
@@ -84,16 +85,16 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex justify-center">
-            <ul className="text-white lg:text-xl text-xs ml-5 flex flex-col justify-between">
+          <div className="flex sm:justify-center">
+            <ul className="text-white lg:text-xl text-sm sm:ml-5 flex flex-col justify-between">
               <li className="">
-                <a href='/ContactUs'><h1>Contact Us</h1></a>
+                <Link href='/ContactUs'>Contact Us</Link>
               </li>
-              {/* <li className="">
-                                <h1>Privacy Policy</h1>
-                            </li> */}
               <li className="">
-                <h1 className="lg:text-xl text-xs">info@botlabdynamics.com</h1>
+                <Link href='/Privacy_Policy'>Privacy Policy</Link>
+              </li><br/>
+              <li className="">
+                <h1 className="lg:text-xl text-sm">info@botlabdynamics.com</h1>
               </li>
               <li>
                 <p>+919058484934</p>

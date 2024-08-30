@@ -16,7 +16,7 @@ import {
 const Client = () => {
     let list = [clientImg, clientImg, clientImg, clientImg, clientImg, clientImg, clientImg, clientImg, clientImg, clientImg, clientImg, clientImg, clientImg, clientImg, clientImg]
     const plugin = React.useRef(
-        Autoplay({ delay: 2000, stopOnInteraction: false })
+        Autoplay({ delay: 1000, stopOnInteraction: true })
     )
     return (
         <div>

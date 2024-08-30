@@ -10,7 +10,6 @@ import Herocard from "../Home/Herocard";
 import StoryPage from "../Home/StoryPage";
 import useGetRequest from "../../../api/UseGetRequest";
 import endpointData from "../../../api/endpointData";
-import videodata from "../../../../Images/Image/botlab.webm";
 // Initialize ScrollMagicPluginGsap
 // ScrollMagicPluginGsap(ScrollMagic, TweenMax);
 

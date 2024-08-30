@@ -53,7 +53,7 @@ const App = () => {
     )} */}
       {/* opacity-0 transition-opacity duration-500 ease-in-out */}
 
-      {loading ? (
+      {/* {loading ? (
         <div className="flex justify-center items-center align-middle  h-screen transition-opacity duration-700 ease-in-out  ">
           <Image
             src={loadingdata}
@@ -63,11 +63,11 @@ const App = () => {
             className=""
           />
         </div>
-      ) : (
+      ) : ( */}
         <div className="transition-opacity duration-700 ease-in-out">
           <Homepage />
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 };
