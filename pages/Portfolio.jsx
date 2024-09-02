@@ -17,7 +17,7 @@ const ContactUs = () => {
         <Background />
         <div className="">
           <div className="fixed top-0"><HeaderBar /></div>
-          <Portfolio/>
+          <Portfolio />
           <Footer />
         </div>
       </div>

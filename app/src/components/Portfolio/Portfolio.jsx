@@ -10,53 +10,53 @@ const Portfolio = () => {
                 <div key={index} className="mb-10 xl:ml-72 lg:ml-48 md:ml-36">
                     {/* Conditional Rendering Based on Available Data */}
                     <div>
-                        {item.Title && <h1 className="text-white lg:text-4xl text-xl font-lexend">{item.Title}</h1>}
-                        {item.Title0 && <h1 className="text-white lg:text-4xl text-xl font-lexend">{item.Title0}</h1>}
-                        {item.subtitle && <h1 className="text-gray-400 mt-1">{item.subtitle}</h1>}
-                        {item.eventPlace && <h1 className="text-white text-[12px] mt-2">{item.eventPlace}</h1>}
-                        {item.eventDate && <h1 className="text-gray-400 text-[12px] mt-0">{item.eventDate}</h1>}
+                        {item.Title && <h1 className="text-[#F5F5F5] text-[400px] lg:text-4xl text-xl font-lexend">{item.Title}</h1>}
+                        {item.Title0 && <h1 className="text-[#F5F5F5] text-[400px] lg:text-4xl text-xl font-lexend">{item.Title0}</h1>}
+                        {item.subtitle && <h1 className="text-[#AAAAAA] text-[15px] mt-3 font-lexend">{item.subtitle}</h1>}
+                        {item.eventPlace && <h1 className="text-[#E2E2E2] text-[15px] mt-2">{item.eventPlace}</h1>}
+                        {item.eventDate && <h1 className="text-[#AAAAAA] ">{item.eventDate}</h1>}
                     </div>
 
                     {/* Rendering Project Overview Details */}
                     <div>
-                        {item.Title1 && <h1 className="text-white text-2xl font-lato">{item.Title1}</h1>}
+                        {item.Title1 && <h1 className="text-white text-2xl font-lexend">{item.Title1}</h1>}
                         {item.Clientname && (
-                            <div className="flex">
-                                <div className="text-white text-[15px] w-28 text-right">{item.Clientname}</div>
-                                <div className="text-gray-400 ml-1 ">{item.Client}</div>
+                            <div className="flex mt-3">
+                                <div className="text-white text-[15px] w-28 text-right font-lato">{item.Clientname}</div>
+                                <div className="text-gray-400 ml-2 font-lato">{item.Client}</div>
                             </div>
                         )}
                         {item.Industryname && (
-                            <div className="flex">
-                                <div className="text-white text-[15px] w-28 text-right">{item.Industryname}</div>
-                                <div className="text-gray-400 ml-1 ">{item.Industry}</div>
+                            <div className="flex -mt-1">
+                                <div className="text-[#F5F5F5] text-[15px] w-28 text-right font-lato">{item.Industryname}</div>
+                                <div className="text-[#F5F5F5] ml-2 ">{item.Industry}</div>
                             </div>
                         )}
                         {item.Eventname && (
 
-                            <div className="flex">
-                                <div className="text-white text-[15px] w-28 text-right">{item.Eventname}</div>
-                                <div className="text-gray-400 ml-1 ">{item.Eventname}</div>
+                            <div className="flex -mt-1">
+                                <div className="text-white text-[15px] w-28 text-right font-lato">{item.Eventname}</div>
+                                <div className="text-gray-400 ml-2 ">{item.Eventname}</div>
                             </div>
                         )}
                         {item.Locationname && (
 
-                            <div className="flex">
-                                <div className="text-white text-[15px] w-28 text-right">{item.Locationname}</div>
-                                <div className="text-gray-400 ml-1 ">{item.Location}</div>
+                            <div className="flex -mt-1">
+                                <div className="text-white text-[15px] w-28 text-right font-lato">{item.Locationname}</div>
+                                <div className="text-gray-400 ml-2 ">{item.Location}</div>
                             </div>
                         )}
                         {item.dronesname && (
-                            <div className="flex">
-                                <div className="text-white text-[15px] w-28 text-right">{item.dronesname}</div>
-                                <div className="text-gray-400 ml-1 ">{item.drones}</div>
+                            <div className="flex -mt-1">
+                                <div className="text-white text-[15px] w-28 text-right font-lato">{item.dronesname}</div>
+                                <div className="text-gray-400 ml-2 ">{item.drones}</div>
                             </div>
                         )}
 
                         {item.Reachname && (
-                            <div className="flex">
-                                <div className="text-white text-[15px] w-28 text-right">{item.Reachname}</div>
-                                <div className="text-gray-400 ml-1 ">{item.Reach}</div>
+                            <div className="flex -mt-1">
+                                <div className="text-white text-[15px] w-28 text-right font-lexend">{item.Reachname}</div>
+                                <div className="text-gray-400 ml-2 ">{item.Reach}</div>
                             </div>
                         )}
                     </div>
@@ -64,7 +64,7 @@ const Portfolio = () => {
                     {item.vidUrl && (
                         <div className="mt-5">
                             <iframe
-                                className="xl:w-[1000px] xl:h-[500px] lg:w-[650px] lg:h-[350px] md:w-[600] md:h-[300px] aspect-video"
+                                className="xl:w-[1000px] xl:h-[500px] lg:w-[650px] lg:h-[350px] md:w-[550px] md:h-[300px] aspect-video"
                                 src={item.vidUrl}
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -123,11 +123,49 @@ const Portfolio = () => {
 
                     {/* {here need to image} */}
 
+
+                    <div>
+                    {item.gallery && (
+            <div className="  bg-blend-darken">
+              <LightGallery
+                plugins={[lgZoom, lgVideo]}
+                mode="lg-fade"
+                elementClassNames="container"
+              >
+                <a data-src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+261.png">
+                  <Image
+                    src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+261.png"
+                    width={404}
+                    height={400}
+                    className="card1"
+                  />
+                </a>
+                <a data-src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+259.png">
+                  <Image
+                    src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+259.png"
+                    width={611}
+                    height={400}
+                    className="card2 lg:!w-[580px] xl:!w-[611px]"
+                  />
+                </a>
+                <a data-src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+260.png">
+                  <Image
+                    src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+260.png"
+                    width={404}
+                    height={400}
+                    className="card3"
+                  />
+                </a>
+              </LightGallery>
+            </div>
+          )}
+                    </div>
+
                     <div className="">
-                        {item.subtitle7 && <h1 className="text-white text-[30px] mt-10 xl:ml-52">{item.subtitle7}</h1>}
+                        {item.subtitle7 && <h1 className="text-white text-[30px] mt-10 xl:text-left xl:ml-52 lg:text-start">{item.subtitle7}</h1>}
                         <div>
                             {item.icons1 && (
-                                <div className="flex mt-4 xl:ml-44 xl:space-x-28 lg:space-x-16 md:space-x-12">
+                                <div className="flex mt-4 xl:ml-44 xl:space-x-28 xl:justify-start lg:space-x-32 md:space-x-12">
                                     {item.icons1.map((icon, iconIndex) => (
                                         <div key={iconIndex} className="text-center">
                                             <Image
@@ -150,10 +188,10 @@ const Portfolio = () => {
                     </div>
 
                     <div className="">
-                        {item.Title13 && <h1 className="text-white text-[23px] mt-14 xl:ml-72 lg:ml-24 md:ml-20">{item.Title13}</h1>}
+                        {item.Title13 && <h1 className="text-white text-[23px] mt-14 xl:ml-72 xl:text-left lg:ml-36 md:ml-20">{item.Title13}</h1>}
                         <div>
                             {item.icons1 && (
-                                <div className="flex mt-4 xl:ml-44 xl:space-x-28 lg:space-x-14 md:space-x-12">
+                                <div className="flex mt-4 xl:ml-44 xl:space-x-28 xl:justify-start lg:space-x-32 lg:justify-start md:space-x-12">
                                     {item.icons1.map((icon, iconIndex) => (
                                         <div key={iconIndex} className="text-center">
                                             <Image
