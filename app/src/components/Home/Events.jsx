@@ -27,9 +27,9 @@ const Events = () => {
     <>
       <div className=" py-20 flex lg:justify-center align-middle items-center">
         <div className="  lg:h-[500px]">
-          <div className="flex">
+          <div className="flex sm:flex-row flex-col ">
             <div className="mt-20">
-            {
+              {
                 EventData.map((item, index) => (<>
                   <div className=''>
                     {/* <div className='w-40 border-l  leading-3 border-white'>
@@ -89,7 +89,7 @@ d
                 </>
               ))} */}
 
-{
+              {
                 EventData.map((item, index) => (<>
                   <div>
                     {
