@@ -10,7 +10,7 @@ const PortfolioData = [
         eventDate: "JUN 02, 2024",
     },
     {
-        Title1: "Project Overview",
+        Title1: "PROJECT OVERVIEW",
         Clientname: "Client :",
         Client: "The House of Abhinandan Lodha",
         Industryname: "Industry :",
