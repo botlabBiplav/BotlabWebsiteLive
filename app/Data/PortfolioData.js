@@ -18,7 +18,7 @@ const PortfolioData = [
         Eventname: "Event :",
         Event: "Project pre-launch",
         Locationname: "Location :",
-        Location: "Orana Convention Center, Gurgaon :",
+        Location: "Orana Convention Center, Gurgaon ",
         dronesname: "No. of drones :",
         drones: 700,
         Reachname: "Reach :",
