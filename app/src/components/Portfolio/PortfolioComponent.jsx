@@ -28,7 +28,7 @@ const PortfolioComponent = () => {
   return (
     <div className="mt-44">
       {PortfolioData.map((item, index) => (
-        <div key={index} className="mb-10 xl:ml-72 lg:ml-48 md:ml-36">
+        <div key={index} className="mb-10 xl:ml-72 flex lg:justify-center md:ml-36">
           {/* Conditional Rendering Based on Available Data */}
           <div>
             {item.Title && (
@@ -227,7 +227,7 @@ const PortfolioComponent = () => {
           </div>
 
           {item.gallery && (
-            <div className="	bg-blend-darken">
+            <div className="bg-blend-darken">
               <LightGallery
                 plugins={[lgZoom, lgVideo]}
                 mode="lg-fade"

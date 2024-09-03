@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import HeaderBar from "../app/src/components/Home/HeaderBar";
+// import HeaderBar from "../app/src/components/Home/HeaderBar";
 import dynamic from "next/dynamic";
 import axios from "axios";
 import "../app/globals.css";
@@ -11,14 +11,14 @@ import PortfolioComponent from "../app/src/components/Portfolio/PortfolioCompone
 const Portfolio = () => {
   return (
     <>
-      <div className="fixed z-10">
-        <Background />
-        <div className="">
-          <div className="top-0"><HeaderBar /></div>
-          <PortfolioComponent />
-          <Footer />
+        <div className="z-10">
+          <Background />
+          <div className="bg-gradient-to-t from-black via-black">
+            {/* <div className="fixed top-0"><HeaderBar /></div> */}
+            <PortfolioComponent />
+            <Footer />
+          </div>
         </div>
-      </div>
       {/* <Creative /> */}
     </>
   );

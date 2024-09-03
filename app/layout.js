@@ -1,9 +1,9 @@
 "use client"
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./src/components/Footer/Footer";
-import HeaderBar from "./src/components/Home/HeaderBar";
+import Header from "./src/components/Header/Header"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     // Simulate loading time for demonstration purposes
     const timer = setTimeout(() => {
       setFooterDelay(true);
-    },5000); // Adjust the delay time as needed
+    }, 5000); // Adjust the delay time as needed
 
     // Clean up timer to prevent memory leaks
     return () => clearTimeout(timer);
@@ -29,15 +29,18 @@ export default function RootLayout({ children }) {
         <title>
           BotLab Dynamics | India&apos;s Leading Drone Show Company
         </title>
-        
+
       </head>
-      <body className={inter.className}><div className="fixed w-full sm:h-0 inset-0 h-screen z-[150]"><HeaderBar /></div> 
-      
-      <main>{children}</main>
-        {/* {
-          footerDelay &&  */}
+      <body className={inter.className}>
+        {/* <div className="fixed w-full sm:h-0 inset-0 h-screen z-[150]">
+          <HeaderBar />
+        </div> */}
+        <Header />
+
+        <main>{children}</main>
+
         <Footer />
-        {/* } */}
+
       </body>
     </html>
   );
