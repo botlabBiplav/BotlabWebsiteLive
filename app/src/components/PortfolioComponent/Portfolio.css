@@ -1,0 +1,44 @@
+/* .card {
+    width: 100px !important;
+    background-color: black;
+    height: 400px;
+} */
+
+
+.galleryStyle {
+    width: 1009px;
+    position: relative;
+    height: 460px;
+    /* z-index: -1; */
+}
+
+/* .card1 {
+    @apply absolute xl:left-[-6px] xl:top-0 xl:w-[405px] lg:w-[383px] lg:top-1 lg:left-[-17px]
+}
+
+.card2 {
+    @apply absolute xl:top-0 xl:bottom-0 xl:right-0 lg:right-16 lg:bottom-4 lg:top-3.1 z-[-1] 
+}
+
+.card3 {
+    @apply absolute xl:bottom-[-5px] xl:left-[-6px] xl:w-[405px] lg:bottom-4 lg:w-[383px] lg:left-[-17px]
+} */
+
+.card1, .card3 {
+    @apply absolute;
+}
+
+
+.card1 {
+    @apply xl:left-[-6px] xl:top-0 xl:w-[405px] lg:w-[383px] lg:top-1 lg:left-[-17px];
+}
+
+
+.card2 {
+    @apply absolute xl:top-0 xl:bottom-0 xl:right-0 xl:w-[405px] xl:h-[465px] lg:w-[383px] lg:h-[440px] lg:right-16 lg:bottom-4 lg:top-[4px] z-[-1];
+}
+
+
+.card3 {
+    @apply xl:left-[-6px] xl:bottom-[-5px] xl:w-[405px] lg:w-[383px] lg:bottom-4 lg:left-[-17px];
+}

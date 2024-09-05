@@ -10,45 +10,45 @@ import Location from "../app/src/components/ContactUs/Location";
 import Background from "../app/src/components/Background/Background";
 
 const ContactUs = () => {
-    const [landingPageLoaded, setLandingPageLoaded] = useState(false);
-    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+    // const [landingPageLoaded, setLandingPageLoaded] = useState(false);
+    // const API_URL = process.env.NEXT_PUBLIC_API_URL;
   
-    useEffect(() => {
-      // Simulate loading time for demonstration purposes
-      const timer = setTimeout(() => {
-        setLandingPageLoaded(true);
-      }, 500); // Adjust the delay time as needed
+    // useEffect(() => {
+    //   // Simulate loading time for demonstration purposes
+    //   const timer = setTimeout(() => {
+    //     setLandingPageLoaded(true);
+    //   }, 500); // Adjust the delay time as needed
   
-      // Clean up timer to prevent memory leaks
-      return () => clearTimeout(timer);
-    }, []);
+    //   // Clean up timer to prevent memory leaks
+    //   return () => clearTimeout(timer);
+    // }, []);
   
-    const [articles, setArticles] = useState([]);
+    // const [articles, setArticles] = useState([]);
   
-    useEffect(() => {
-      const fetchdata = async () => {
-        try {
-          const res = await axios.get(`${API_URL}/api/products`);
-          setArticles(res.data.data);
-        } catch (error) {
-          console.error("there is some error with the api", error);
-        }
-      };
-      fetchdata();
-    }, []);
+    // useEffect(() => {
+    //   const fetchdata = async () => {
+    //     try {
+    //       const res = await axios.get(`${API_URL}/api/products`);
+    //       setArticles(res.data.data);
+    //     } catch (error) {
+    //       console.error("there is some error with the api", error);
+    //     }
+    //   };
+    //   fetchdata();
+    // }, []);
   
-    useEffect(() => {
-      console.log(articles, "this is article");
-    }, [articles]);
+    // useEffect(() => {
+    //   console.log(articles, "this is article");
+    // }, [articles]);
   
     return (
       <>
-      <div className="z-10">
+      <div className="">
         <Background />
-        <div className=" bg-gradient-to-t from-black via-black">
+        <div className="bg-gradient-to-t from-black via-black">
           {/* <ServerGet /> */}
           
-          <div className="fixed z-10"><HeaderBar /></div>  
+          <div className="fixed w-full top-0 z-[150]"><HeaderBar /></div>  
               <Location/>
               <div className="pt-10"><Form /></div>
               {/* <Server /> */}

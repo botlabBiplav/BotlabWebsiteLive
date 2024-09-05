@@ -75,7 +75,7 @@ const Homepage = () => {
         <LandingPage />
         </div> */}
           <Herocard />
-          <StoryPage /> 
+          <StoryPage />
           {/* <Portfolio /> */}
 
           {/* {landingPageLoaded ? ( */}

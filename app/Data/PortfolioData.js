@@ -59,6 +59,7 @@ const PortfolioData = [
         description3:
             "Male artist with a baritone voice selected keeping in mind other client advertising of The Sarayu, the solemn spiritual and sentimental atmospherics of the show, and brand ambassador Amitabh Bachchan, whose portrait was also part of the show.",
     },
+
     {
         Title7: "Music",
         description4:
@@ -68,6 +69,7 @@ const PortfolioData = [
         subtitle6:
             "Our expert production team delivered a video ad documenting the show to the client within 2 days. We filmed audience testimonials, operated filming drones to collate multiple angles for video production, scripted the video, and interfaced with the voice-over artist for video narration. The result was a visually stunning video that captured both the high emotion and masterful artistry of the show, which the client posted across social media platforms.",
     },
+    { gallery: true },
     {
         Title8: "ACHIEVEMENT",
         Titlename: "The",

@@ -25,6 +25,9 @@ module.exports = {
         'lexend': ["Lexend"],
         'golden-hopes': ['GoldenHopes'],
       },
+      spacing: {
+        '3.1': '3.1px',
+      },
       colors: {
         border: "hsl(var(--border))",
         custombackground: '#7035F7',
