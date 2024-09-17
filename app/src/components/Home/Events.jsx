@@ -31,11 +31,7 @@ const Events = () => {
             <div className="mt-20">
               {
                 EventData.map((item, index) => (<>
-                  <div className=''>
-                    {/* <div className='w-40 border-l  leading-3 border-white'>
-d
-                    </div> */}
-
+                  <div key={index}>
                     <Link href={item.link}><Button onMouseEnter={() => setHoveredIndex(index)} className="font-lexend font-light tracking-widest btn lg:!w-72 !w-60 lg:!text-lg !text-sm lg:py-8 mt-5 text-white" >{item.eventType}</Button></Link>
                   </div>
                 </>))
@@ -91,7 +87,7 @@ d
 
               {
                 EventData.map((item, index) => (<>
-                  <div>
+                  <div key={index}>
                     {
                       index === hoveredIndex &&
                       <><div className=" mx-16 bg-gradient-to-t from-black via-90% via-violet-600/50 to-purple-800 px-[2px] py-[2px] w-auto h-auto">

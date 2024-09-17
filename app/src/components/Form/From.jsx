@@ -95,7 +95,7 @@ export default function Form() {
             <form onSubmit={handleSubmit}>
               <div className="flex justify-between lg:space-x-4 space-x-2">
                 <Input
-                  clas
+                  
                   type="text"
                   placeholder="Your Name"
                   className="bg-black text-white xl:py-4 lg:py-3 py-[8px] lg:text-2xl text-sm "

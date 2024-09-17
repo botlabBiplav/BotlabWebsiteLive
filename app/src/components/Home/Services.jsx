@@ -80,7 +80,7 @@ const Services = () => {
                     {
                         servicedata.map((item, index) => (<>
 
-                            <div class="service_card xl:h-[480px] lg:h-[400px] cursor-pointer">
+                            <div key={index} class="service_card xl:h-[480px] lg:h-[400px] cursor-pointer">
                                 <Image
                                     src={item.img}
                                     className="service_image"
