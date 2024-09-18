@@ -5,7 +5,7 @@
 @font-face {
   font-family: 'GoldenHopes';
   src: url('/fonts/goldenhopes_personal_use_only-webfont.woff2') format('woff2'),
-       url('/fonts/goldenhopes_personal_use_only-webfont.woff') format('woff');
+    url('/fonts/goldenhopes_personal_use_only-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -98,7 +98,7 @@
   background: transparent;
   position: relative;
   transition: all 0.25s;
-  overflow: hidden; 
+  overflow: hidden;
   border-radius: 0;
 }
 
@@ -209,7 +209,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 160vh;  
+  height: 160vh;
   background-color: black;
 }
 

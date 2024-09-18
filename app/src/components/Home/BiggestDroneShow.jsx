@@ -17,7 +17,7 @@ const BiggestDroneShow = () => {
         </div>
         <div className="flex align-between justify-center gap-20 py-10">
             <div className="w-1/2 text-center">
-                <iframe className="flex aspect-video w-full" src="https://www.youtube.com/embed/a-RrjHKQMsI?si=uvZJieB2deZmqeSc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe className="flex aspect-video w-full" src="https://www.youtube.com/embed/a-RrjHKQMsI?si=uvZJieB2deZmqeSc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
             <div className="w-1/2 text-center">
                 <iframe className="flex aspect-video w-full" src="https://www.youtube.com/embed/mw8dvXC8tC0?si=YDXqv0Rb5H5jPdza" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>

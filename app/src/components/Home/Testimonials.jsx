@@ -21,12 +21,12 @@ const Testimonials = () => {
     Autoplay({ delay: 4500, stopOnInteraction: false })
   );
 
-  // const { data, loading, error } = UseGetRequest(endpointData.testimonials);
+  const { data, loading, error } = UseGetRequest(endpointData.testimonials);
 
-  // if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
+  if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
 
-  // if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
-  // console.log(data, "dataGGT");
+  if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
+  console.log(data, "dataGGT");
   return (
     <>
       <div className="pt-40">
@@ -61,7 +61,6 @@ const Testimonials = () => {
                               />
                               <div className='ml-16 mt-10 w-1/2'>
                                 <p className="font-golden-hopes text-6xl text-[#8409FF]">{item.name}</p>
-                                {/* <p className="xl:text-2xl  lg:text-base text-sm font-lexend">{item.subtitle}</p> */}
                               </div>
                             </div>
 
@@ -73,7 +72,7 @@ const Testimonials = () => {
                   </div>
                 </CarouselItem>
               ))}
-              {/* strapi integration */}
+              {/* strapi integration */}  
               {/* {data.map((item, index) => (
                 <CarouselItem
                   key={index}

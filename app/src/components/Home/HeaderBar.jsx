@@ -12,8 +12,8 @@ const HeaderBar = () => {
   };
 
   return (
-    <nav className="px-4 py-2 bg-black/75 backdrop-blur w-screen">
-      <div className="container mx-auto my-2 flex justify-between items-center">
+    <nav className="px-10 py-2 bg-black/75 w-auto backdrop-blur">
+      <div className="mx-auto my-2 flex justify-between items-center">
         <Link href="/" className="text-white text-2xl font-bold">
           <Image
             className="sm:w-48 w-2/3"
@@ -24,7 +24,7 @@ const HeaderBar = () => {
           />
         </Link>
         <div className="lg:hidden z-50">
-          {/* Hamburger Icon */}
+
           <button onClick={toggleMenu}>
             {menuOpen ? (
               <XIcon className="h-10 w-10 text-white" />
@@ -33,7 +33,7 @@ const HeaderBar = () => {
             )}
           </button>
         </div>
-        {/* Menu Overlay */}
+
         <div className={`fixed inset-0 h-screen bg-black/90 z-40 transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out lg:hidden`}>
 
           <ul className="flex pt-40 flex-col items-center justify-start h-auto space-y-6">
@@ -57,7 +57,7 @@ const HeaderBar = () => {
                 CONTACT US
               </Link>
             </li>
-            {/* Add more links as needed */}<li className={`opacity-0 transform ${menuOpen ? 'opacity-100 translate-x-0 delay-200' : 'translate-x-10'} transition-all duration-200`}>
+            <li className={`opacity-0 transform ${menuOpen ? 'opacity-100 translate-x-0 delay-200' : 'translate-x-10'} transition-all duration-200`}>
               <Link href="/Privacy_Policy" className="text-white text-sm flex font-lexend text-center justify-center self-end mt-80 font-light hover:drop-shadow-[0_0_10px_rgba(255,255,255,100)]">
                 Privacy Policy
               </Link>
@@ -67,7 +67,7 @@ const HeaderBar = () => {
             </li>
           </ul>
         </div>
-        {/* Desktop Menu */}
+
         <ul className="hidden lg:flex space-x-6">
           <li>
             <Link href="/" className="font-lexend text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,100)]">
@@ -89,7 +89,7 @@ const HeaderBar = () => {
               CONTACT US
             </Link>
           </li>
-          {/* Add more links as needed */}
+
         </ul>
       </div>
     </nav>

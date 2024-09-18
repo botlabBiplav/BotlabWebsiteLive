@@ -53,15 +53,15 @@ const Herocard = () => {
   }, [charIndex, isDeleting, wordIndex, isPaused]);
 
 
+  const { data, loading, error } = useGetRequest(endpointData.heroSection);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 
-  // const { data, loading, error } = useGetRequest(endpointData.heroSection);
-  // const API_URL = process.env.NEXT_PUBLIC_API_URL;
+  if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
 
-  // if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
+  if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
 
-  // if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
-  // console.log(data, "findrrt");
+  console.log(data,'this data is working ')
   return (
     <>
       {/* <div class="aspect-w-16 aspect-h-9">
@@ -97,21 +97,27 @@ const Herocard = () => {
           </div>
         </>
       ))} */}
+      
+      {data?.map((item) => (<>
 
+      
+      
+      
 <div className='relative h-screen w-full overflow-hidden bg-transparent'>
     <video src={videodata} autoPlay muted loop disablePictureInPicture className='absolute top-0 left-0 min-w-full min-h-full object-cover z-0'/>
     
     <div className='relative z-10 flex flex-col sm:justify-end justify-center md:pb-8 sm:max-lg:pl-20 lg:pl-80 px-10 sm:items-start items-center h-full'>
-        {/* Your content goes here */}
         <div className='sm:text-left text-center text-white'>
             <h1 className="text-white sm:text-7xl pb-4 text-4xl font-lexend sm:w-auto">
-                THE NEW ERA OF
-                <br/> <p id="typewriter" className="font-golden-hopes sm:text-[13rem] text-7xl sm:text-[#8409FF]">{text}&nbsp;</p>
+            {item.attributes.title}
+                <br/> <p id="typewriter" className="font-golden-hopes sm:text-[13rem] text-7xl sm:text-[#8409FF]"> {text}&nbsp;</p>
             </h1>
             {/* <p className='mt-5 text-4xl font-lato-light tracking-widest'>THE STARS SPEAK YOUR STORY</p> */}
         </div>
     </div>
 </div>
+      
+      </>))}
     </>
   );
 };

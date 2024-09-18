@@ -22,6 +22,8 @@ import Herocard from "./Home/Herocard";
 // import Portfolio from "./Home/Portfolio";
 import Showreel from "./Home/Showreel";
 import BiggestDroneShow from "./Home/BiggestDroneShow";
+// import CareesPage from "./Home/CareesPage"
+// import CareesPage from "./CareersPage/CareersPage";
 
 
 // import ServerGet from "./Home/ServerGet";
@@ -75,7 +77,7 @@ const Homepage = () => {
         <LandingPage />
         </div> */}
           <Herocard />
-          <StoryPage /> 
+          <StoryPage />
           {/* <Portfolio /> */}
 
           {/* {landingPageLoaded ? ( */}
@@ -85,8 +87,9 @@ const Homepage = () => {
             <Events />
             <Showreel />
             <div className="bg-gradient-to-t from-black via-transparent">
-              <BiggestDroneShow /></div>
-            <Animation />
+              <BiggestDroneShow />
+            </div>
+            {/* <Animation /> */}
             <div className="bg-black" >
               <Testimonials />
               <Client />
