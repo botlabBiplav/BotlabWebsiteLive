@@ -28,17 +28,17 @@ const Events = () => {
       <div className=" py-20 flex lg:justify-center align-middle items-center">
         <div className="  lg:h-[500px]">
           <div className="flex sm:flex-row flex-col ">
-            <div className="mt-20">
+            <div className="mt-1">
               {
-                EventData.map((item, index) => (<>
-                  <div className=''>
+                EventData.map((item, index) => (
+                  <div className='' key={index}>
                     {/* <div className='w-40 border-l  leading-3 border-white'>
 d
                     </div> */}
 
                     <Link href={item.link}><Button onMouseEnter={() => setHoveredIndex(index)} className="font-lexend font-light tracking-widest btn lg:!w-72 !w-60 lg:!text-lg !text-sm lg:py-8 mt-5 text-white" >{item.eventType}</Button></Link>
                   </div>
-                </>))
+                ))
               }
               {/* strapi integration */}
               {/* {data.map((item, index) => (
@@ -90,8 +90,8 @@ d
               ))} */}
 
               {
-                EventData.map((item, index) => (<>
-                  <div>
+                EventData.map((item, index) => (
+                  <div key={index}>
                     {
                       index === hoveredIndex &&
                       <><div className=" mx-16 bg-gradient-to-t from-black via-90% via-violet-600/50 to-purple-800 px-[2px] py-[2px] w-auto h-auto">
@@ -110,7 +110,7 @@ d
                     }
 
                   </div>
-                </>))
+                ))
               }
             </div>
           </div>
