@@ -18,9 +18,9 @@ const Portfolio = () => {
         <div className="">
           <div className="fixed w-full lg:space-x-14 xl:text-base lg:text-xl top-0 z-[150]"><HeaderBar /></div>
           <div className="w-full">
-          <PortfolioComponent />
+            <PortfolioComponent />
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
 

@@ -24,6 +24,11 @@ module.exports = {
         'lato': ['Lato', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
         'lexend': ["Lexend"],
         'golden-hopes': ['GoldenHopes'],
+
+      },
+      screens: {
+        // Custom media queries
+        '3xl': '1600px',  // Larger than 2xl
       },
       spacing: {
         '3.1': '3.1px',
@@ -85,7 +90,6 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-
       },
     },
   },

@@ -1,5 +1,5 @@
 "use client"
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./src/components/Footer/Footer";
@@ -19,14 +19,14 @@ const inter = Inter({ subsets: ["latin"] });
 //         <title>
 //           BotLab Dynamics | India&apos;s Leading Drone Show Company
 //         </title>
-        
+
 //       </head>
 //       <body className={inter.className}>
 
 //         <div className="fixed w-full sm:h-0 inset-0  z-[150]">
 //           <HeaderBar />
 //         </div> 
-      
+
 //       <main>{children}</main>
 //         {/* {
 //           footerDelay &&  */}
@@ -44,20 +44,20 @@ export default function RootLayout({ children }) {
         {/* Add meta tags and links if necessary */}
       </head>
       <body className={inter.className}>
-        
-        {/* HeaderBar */}
+
+
         <div className="fixed w-full top-0 z-[150]">
           <HeaderBar />
         </div>
 
-        {/* Adjust the main content to leave space for the fixed header */}
-        <main className="pt-20"> {/* Adjust this padding based on your HeaderBar height */}
+
+        <main className="pt-20">
           {children}
         </main>
 
-        {/* Footer */}
-        <Footer />
-        
+        <div className="">
+          <Footer />
+        </div>
       </body>
     </html>
   );
