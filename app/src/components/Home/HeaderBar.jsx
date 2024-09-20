@@ -89,6 +89,11 @@ const HeaderBar = () => {
               CONTACT US
             </Link>
           </li>
+          <li>
+            <Link href="/AboutUs" className="font-lexend text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,100)]">
+              ABOUT US
+            </Link>
+          </li>
 
         </ul>
       </div>

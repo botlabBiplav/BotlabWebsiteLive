@@ -10,7 +10,7 @@ const CareersPage = () => {
                 <div className='text-[#F5F5F5] font-lexend text-5xl text-center'>WORK AT BOTLAB</div>
                 <p className='text-[#F5F5F5] text-xs text-center'>Join the 150+ growing family of innovators</p>
             </div>
-            <div className='mt-28'>
+            <div className='mt-20'>
                 <div className='text-[#F5F5F5] font-lexend text-3xl text-center'>WORK CULTURE</div>
                 <p className='text-[#F5F5F5] text-xs text-center'>At BotLab, we have an open culture of constant growth and <br /> improvement, with opportunities for talent to try new things and <br /> gain invaluable experience.</p>
             </div>

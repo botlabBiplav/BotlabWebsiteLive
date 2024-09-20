@@ -10,7 +10,7 @@ const PortfolioData = [
         eventDate: "JUN 02, 2024",
     },
     {
-        Title1: "PROJECT OVERVIEW",
+        Title1: "Project Overview",
         Clientname: "Client :",
         Client: "The House of Abhinandan Lodha",
         Industryname: "Industry :",
@@ -46,7 +46,7 @@ const PortfolioData = [
             "The show design drew from the client’s ongoing campaign for consistency across international activations. The narrative seamlessly transported spectators from history to modernity, and from Ayodhya to the world as spiritual motifs like Lord Ram’s visage and the Ayodhya temple reformed into spectacular drone formations of landmarks from across target locations, evoking nostalgic connections to NRIs’ hybrid Indian and global identities. Finally, the persuasive call for Indians to return home was accompanied by a life-like portrait of Amitabh Bachchan, the brand ambassador of The Sarayu.",
     },
     {
-        Title5: "Voice-over Script",
+        Title5: "Voice-Over Script",
         Languagesname: "Languages :",
         Languages: "English and Hindi",
         Tonename: "Tone :",
@@ -55,7 +55,7 @@ const PortfolioData = [
             "Emotive language used to invoke yearning for NRIs’ spiritual home in Ayodhya, paralleling Lord Ram’s return.",
     },
     {
-        Title6: "Voice-over Artist",
+        Title6: "Voice-Over Artist",
         description3:
             "Male artist with a baritone voice selected keeping in mind other client advertising of The Sarayu, the solemn spiritual and sentimental atmospherics of the show, and brand ambassador Amitabh Bachchan, whose portrait was also part of the show.",
     },
@@ -71,17 +71,17 @@ const PortfolioData = [
     },
     { gallery: true },
     {
-        Title8: "ACHIEVEMENT",
+        Title8: "Achivement",
         Titlename: "The",
         subtitle7: "Global Launch Video in first 24 hours:",
         icons1: [
             { img: PortImg, count1: "51,00,000+", name1: "Views", count4: "-" },
             { img: PortImg1, count2: "25,000+", name2: "Shares", count5: "-" },
             { img: PortImg2, count3: "5,00,00,000+", name3: "Reach", count6: "-" },
-        ], Title13: "DRONE SHOW SPECIFIC POSTS"
+        ], Title13: "Drone Show Specific Posts"
     },
     { Title9: "Appraisal", Title9name: "The", subtitle8: "Drone light shows inspire great curiosity and awe from Non-Resident Indians and global audiences, as proven by the huge audience that tuned in to watch the live broadcast of the show as well as measurably high online engagement across all social media platforms.", subtitle9: "Additionally, despite not aiming to draw an organic crowd, large numbers gathered at the nearby mall market front, with even shop owners and workers pausing their work to watch the entire show. Drone light shows have tremendous potential as a guerilla marketing strategy characterised by high on-ground engagement even with minimal pre-marketing as well as significant online buzz within a 4 km radius due to a show’s high visibility.", subtitle20: "Drone light shows are the next step in experiential storytelling, and can both serve as an immersive showstopper bookending a cutting-edge campaign or as a stand-alone event creating a novel, high-impact brand activation." },
-    { Title10: "ADDITIONAL RELEVENT MEDIA", subtitle10: "Case Study", subtitle11: "Video" }
+    { Title10: "Additional Relevent Media", subtitle10: "Case Study", subtitle11: "Video" }
 ];
 
 export default PortfolioData;

@@ -22,11 +22,13 @@ import Herocard from "./Home/Herocard";
 // import Portfolio from "./Home/Portfolio";
 import Showreel from "./Home/Showreel";
 import BiggestDroneShow from "./Home/BiggestDroneShow";
+// import AboutUs from "./AboutUsPage/AboutsUs";
 // import CareesPage from "./Home/CareesPage"
 // import CareesPage from "./CareersPage/CareersPage";
 
 
 // import ServerGet from "./Home/ServerGet";
+
 
 const LandingPage = dynamic(() => import("./Landingpage/LandingPage"), {
   ssr: false,
@@ -92,6 +94,7 @@ const Homepage = () => {
             {/* <Animation /> */}
             <div className="bg-black" >
               <Testimonials />
+              {/* <AboutUs /> */}
               <Client />
               <Form />
             </div>
