@@ -96,7 +96,7 @@ const Homepage = () => {
               <Testimonials />
               {/* <AboutUs /> */}
               <Client />
-              <Form />
+              {/* <Form /> */}
             </div>
           </>
           {/* ) : (

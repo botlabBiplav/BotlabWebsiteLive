@@ -29,7 +29,7 @@ const PortfolioComponent = () => {
               </h1>
             )}
             {item.Title0 && (
-              <h1 className="text-[#8409FF] 3xl:text-8xl xl:text-7xl lg:text-3xl md:text-3xl font-golden-hopes">
+              <h1 className="text-[#8409FF] 3xl:text-8xl xl:text-7xl lg:text-7xl md:text-7xl font-golden-hopes">
                 {item.Title0}
               </h1>
             )}
@@ -53,7 +53,7 @@ const PortfolioComponent = () => {
           {/* Rendering Project Overview Details */}
           <div className=" xl:ml-72 md:ml-48 xl:w-auto lg:w-full md:w-full 3xl:mt-16">
             {item.Title1 && (
-              <h1 className="text-[#8409FF] 3xl:text-6xl xl:text-7xl lg:text-xl md:text-3xl font-golden-hopes">
+              <h1 className="text-[#8409FF] 3xl:text-6xl xl:text-7xl lg:text-7xl md:text-7xl font-golden-hopes">
                 {item.Title1}
               </h1>
             )}
@@ -139,7 +139,7 @@ const PortfolioComponent = () => {
               </h1>
             )}
             {item.Title2 && (
-              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-5xl lg:text-3xl md:text-4xl font-golden-hopes">
+              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-5xl lg:text-7xl md:text-6xl font-golden-hopes">
                 {item.Title2}
               </h1>
             )}
@@ -161,7 +161,7 @@ const PortfolioComponent = () => {
               </h1>
             )}
             {item.Title3 && (
-              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-7xl lg:text-3xl md:text-4xl font-golden-hopes">
+              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-7xl lg:text-7xl md:text-6xl font-golden-hopes">
                 {item.Title3}
               </h1>
             )}
@@ -232,7 +232,7 @@ const PortfolioComponent = () => {
 
           <div className="xl:ml-72 md:ml-48 xl:w-auto lg:w-full md:w-full">
             {item.Title7 && (
-              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-7xl lg:text-2xl md:text-3xl font-golden-hopes mt-10 ml-16">
+              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-7xl lg:text-7xl md:text-6xl font-golden-hopes mt-10 ml-16">
                 {item.Title7}
               </h1>
             )}
@@ -297,7 +297,7 @@ const PortfolioComponent = () => {
               </h1>
             )}
             {item.Title8 && (
-              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-7xl lg:text-4xl md:text-4xl font-golden-hopes">
+              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-7xl lg:text-7xl md:text-7xl font-golden-hopes">
                 {item.Title8}
               </h1>
             )}
@@ -384,7 +384,7 @@ const PortfolioComponent = () => {
               </h1>
             )}
             {item.Title9 && (
-              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-7xl lg:text-4xl md:text-4xl font-golden-hopes">
+              <h1 className="text-[#8409FF] 3xl:text-5xl xl:text-7xl lg:text-7xl md:text-7xl font-golden-hopes">
                 {item.Title9}
               </h1>
             )}

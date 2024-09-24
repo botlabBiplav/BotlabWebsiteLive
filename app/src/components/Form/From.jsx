@@ -6,10 +6,16 @@ import droneImage from "../../../../Images/Image/formdrone.svg";
 import DroneProps from "./DronProps";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { isValidEmail } from "../../Helper/isValidEmail";
+import { isValidPhoneNumber } from "../../Helper/isValidPhoneNumber.js";
+import { set } from "gsap";
 export default function Form() {
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-  const token = process.env.NEXT_PUBLIC_BEARER_TOKEN
+  const [error, setError] = useState("");
+  const [error1, setError1] = useState("");
+
+  const token = process.env.NEXT_PUBLIC_BEARER_TOKEN;
   const [responseMessage, setResponseMessage] = useState("");
   const [showdate, setShowDate] = useState("txt");
   const [inpHandle, setInputHandle] = useState({
@@ -22,78 +28,87 @@ export default function Form() {
   });
 
   const handleInputField = (event) => {
+    if (event.target.name === "email" && !isValidEmail(event.target.value)) {
+      setError("Enter a Vaild Email");
+    } else {
+      setError("");
+    }
+
+    if (
+      event.target.name === "number" &&
+      !isValidPhoneNumber(event.target.value)
+    ) {
+      setError1("Enter a Vaild Number");
+    } else {
+      setError1("");
+    }
     setInputHandle((currData) => {
       return { ...currData, [event.target.name]: event.target.value };
     });
   };
 
   const handleSubmit = async (e) => {
-
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault(); //Prevent page reload
     // const { fullName, number, email, handle, venue, date } = inpHandle;
     // if (!fullName || !number || !email || !handle || !venue || !date) {
     //   setResponseMessage('All fields are required.');
     //   return;
     // }
 
-    console.log('workingdtatftfytf',inpHandle)
+    console.log("workingdtatftfytf", inpHandle);
 
     try {
       const response = await axios.post(
-        'http://localhost:1337/api/contact-forms',
+        "http://localhost:1337/api/contact-forms",
         formData,
         {
           headers: {
-            'Authorization': token, // Replace with your actual token
-            'Content-Type': 'application/json', // Specify the content type
-          }
+            Authorization: token, // Replace with your actual token
+            "Content-Type": "application/json", // Specify the content type
+          },
         }
       );
 
-      console.log(response,'formDatafinder')
+      console.log(response, "formDatafinder");
 
       if (response.status === 200) {
-        setResponseMessage('Form submitted successfully!');
+        setResponseMessage("Form submitted successfully!");
         setFormData({
-          fullName: '',
-          number: '',
-          email: '',
-          handle: '',
-          venue: '',
-          date: '',
+          fullName: "",
+          number: "",
+          email: "",
+          handle: "",
+          venue: "",
+          date: "",
         }); // Clear form
       }
     } catch (error) {
       if (error.response) {
         // Server responded with a status other than 2xx
         setResponseMessage(
-          `Error: ${error.response.data.error || 'An error occurred'}`
+          `Error: ${error.response.data.error || "An error occurred"}`
         );
       } else {
         // Network error or no response
-        setResponseMessage('An unexpected error occurred.');
+        setResponseMessage("An unexpected error occurred.");
       }
     }
+  };
 
-  }
-
-  useEffect(()=>{
-    console.log(showdate,'dataedas')
-  },[showdate])
-
+  useEffect(() => {
+    console.log(showdate, "dataedas");
+  }, [showdate]);
 
   return (
     <>
-      <div className="px-40 flex justify-center t-80 items-center">
-        <div className="grid grid-cols-2 lg:mx-20 mx-5 2xl:mx-60 xl:mx-32">
-          <div className="px-10">
-    
-
+      <div className="bg-gradient-to-t from-black via-black via-70%   flex justify-center  items-center">
+        <div className="grid grid-cols-2 lg:mx-20 mx-5 2xl:mx-60 xl:mx-28">
+          <div className="">
             <DroneProps />
           </div>
-          <div className="content-center py-8 px-10">
+          <div className="content-center mt-12">
             <form onSubmit={handleSubmit}>
-              <div className="flex justify-between lg:space-x-4 space-x-2">
+              <div className="flex justify-between lg:space-x-3 space-x-2">
                 <Input
                   type="text"
                   placeholder="Your Name"
@@ -111,7 +126,11 @@ export default function Form() {
                   onChange={handleInputField}
                 />
               </div>
-              <div className="lg:mt-10 mt-5">
+              <div className="text-red-500 flex justify-center ml-48 lg:text-sm md:text-[10px] md:ml-32">
+                {error1}
+              </div>
+
+              <div className="lg:mt-5 mt-5">
                 <Input
                   type="email"
                   placeholder="Email"
@@ -120,8 +139,11 @@ export default function Form() {
                   value={inpHandle.email}
                   onChange={handleInputField}
                 />
+                <span className="text-red-500 md:text-[12px] md:ml-1">
+                  {error}
+                </span>
               </div>
-              <div className="lg:mt-10 mt-5">
+              <div className="lg:-mt-1 mt-5 md:-mt-1">
                 <Input
                   type="text"
                   placeholder="What type of event"
@@ -140,14 +162,18 @@ export default function Form() {
                   value={inpHandle.venue}
                   onChange={handleInputField}
                 />
-               
-                <DatePicker selectedDate = {()=>setShowDate()}/>
+
+                <DatePicker selectedDate={() => setShowDate()} />
               </div>
-            <div className="flex justify-start mt-10">
-                <button type="submit" className="text-md CTA lg:py-2 lg:px-20 px-5 flex lg:-mt-5 -mt-5 xl:-mt-1">SUBMIT</ button>
+              <div className="flex justify-center mt-10">
+                <button
+                  type="submit"
+                  className="CTA lg:py-2 lg:px-20 px-5 flex lg:ml-12 lg:-mt-5 -mt-5 xl:-mt-1"
+                >
+                  SUBMIT
+                </button>
               </div>
             </form>
-
           </div>
         </div>
       </div>
