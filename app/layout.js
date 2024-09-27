@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>BotLab Dynamics | India's Leading Drone Show Company</title>
+        {/* <title>BotLab Dynamics | India's Leading Drone Show Company</title> */}
         {/* Add meta tags and links if necessary */}
       </head>
       <body className={inter.className}>

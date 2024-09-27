@@ -33,7 +33,7 @@ const DatePicker = ({selectedDate}) => {
     let dateFormate = formatDate(getdate);
     selectedDate(dateFormate);
     console.log(getdate,'datafoundsd')
-  },[getdate])
+  },[getdate,selectedDate])
 
   // bg-black text-white xl:py-4 lg:py-3 py-[8px] lg:text-2xl text-sm
 

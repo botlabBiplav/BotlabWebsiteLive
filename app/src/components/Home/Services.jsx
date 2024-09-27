@@ -2,11 +2,36 @@
 import React, { useState } from "react";
 import servicedata from "../../../Data/servicedata";
 import Image from "next/image";
-import "./servicesCard.css"
+import "./servicesCard.css";
+import useIsr from "../../../api/UseIsr";
+import endpointData from "../../../api/endpointData";
 
-const Services = () => {
+
+
+export async function getStaticProps() {
+  console.log("getStaticProps called"); // Log when the function is called
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const Services = ({ data, error }) => {
+  console.log(data, "dataGGTfound");
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
   // const [hover, setHover] = useState(false)
-  const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <>
       {/* <div className="bg-white">
@@ -71,32 +96,31 @@ const Services = () => {
         </div>
       </div> */}
       <div className="h-full ">
-
-      <div className=' lg:h-[110vh] h-[80vh] grid-cols-2'>
-                <div className='text-6xl flex justify-center'>
-                    <h1 className='lg:mt-10 mt-3 lg:text-6xl text-2xl font-lexend'>SERVICES OFFERED</h1>
+        <div className=" lg:h-[110vh] h-[80vh] grid-cols-2">
+          <div className="text-6xl flex justify-center">
+            <h1 className="lg:mt-10 mt-3 lg:text-6xl text-2xl font-lexend">
+              SERVICES OFFERED
+            </h1>
+          </div>
+          <div className="flex justify-center xl:mt-20 mt-10 flex-wrap items-center">
+            {servicedata.map((item, index) => (
+              
+                <div
+                  key={index}
+                  className="service_card xl:h-[480px] lg:h-[400px] cursor-pointer"
+                >
+                  <Image alt="service images" src={item.img} className="service_image" />
+                  <div className="service_name xl:text-2xl lg:text-md text-[15px]">
+                    {item.title}
+                  </div>
+                  <div className="service_description lg:text-xs pt-40">
+                    {item.description}
+                  </div>
                 </div>
-                <div className='flex justify-center xl:mt-20 mt-10 flex-wrap items-center'>
-                    {
-                        servicedata.map((item, index) => (<>
-
-                            <div key={index} class="service_card xl:h-[480px] lg:h-[400px] cursor-pointer">
-                                <Image
-                                    src={item.img}
-                                    className="service_image"
-                                />  
-                                <div className="service_name xl:text-2xl lg:text-md text-[15px]">
-                                    {item.title}
-                                </div>
-                                <div className="service_description lg:text-xs pt-40">
-                                    {item.description}
-                                </div>
-                            </div>
-                        </>))}
-                </div>
-            </div>
+            ))}
+          </div>
+        </div>
       </div>
-
     </>
   );
 };

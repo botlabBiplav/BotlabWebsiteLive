@@ -16,6 +16,7 @@ import lgVideo from "lightgallery/plugins/video";
 import "./PortfolioComponent.css"
 
 const PortfolioComponent = () => {
+    
     const lightGallery = useRef(null);
     return (
         <div className="mt-44 3xl:mt-64 w-fit">
@@ -147,6 +148,7 @@ const PortfolioComponent = () => {
                                             width={404}
                                             height={400}
                                             className="card1"
+                                            alt="card Images"
                                         />
                                     </a>
 
@@ -156,6 +158,8 @@ const PortfolioComponent = () => {
                                             width={611}
                                             height={400}
                                             className="card2"
+                                            alt="card Images"
+
                                         />
                                     </a>
                                     <a data-src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+260.png">
@@ -164,6 +168,8 @@ const PortfolioComponent = () => {
                                             width={404}
                                             height={400}
                                             className="card3"
+                                            alt="card Images"
+
                                         />
                                     </a>
                                 </LightGallery>

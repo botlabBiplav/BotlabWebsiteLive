@@ -239,6 +239,7 @@ const PortfolioComponent = () => {
                     width={404}
                     height={400}
                     className="card1"
+                    alt="card Image"
                   />
                 </a>
                 <a data-src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+259.png">
@@ -246,6 +247,7 @@ const PortfolioComponent = () => {
                     src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+259.png"
                     width={611}
                     height={400}
+                    alt="card Image"
                     className="card2 lg:!w-[580px] xl:!w-[611px]"
                   />
                 </a>
@@ -254,6 +256,7 @@ const PortfolioComponent = () => {
                     src="https://botlab-website.s3.us-west-2.amazonaws.com/Rectangle+260.png"
                     width={404}
                     height={400}
+                    alt="card Image"
                     className="card3"
                   />
                 </a>

@@ -22,16 +22,19 @@ import Herocard from "./Home/Herocard";
 // import Portfolio from "./Home/Portfolio";
 import Showreel from "./Home/Showreel";
 import BiggestDroneShow from "./Home/BiggestDroneShow";
+import GetUser from "../../../lib/GetUser";
 // import CareesPage from "./Home/CareesPage"
 // import CareesPage from "./CareersPage/CareersPage";
 
-
 // import ServerGet from "./Home/ServerGet";
+
 
 const LandingPage = dynamic(() => import("./Landingpage/LandingPage"), {
   ssr: false,
 });
-const Background = dynamic(() => import('./Background/Background'), { ssr: false });
+const Background = dynamic(() => import("./Background/Background"), {
+  ssr: false,
+});
 
 const Homepage = () => {
   const [landingPageLoaded, setLandingPageLoaded] = useState(false);
@@ -59,7 +62,7 @@ const Homepage = () => {
       }
     };
     fetchdata();
-  }, []);
+  }, [API_URL]);
 
   useEffect(() => {
     console.log(articles, "this is article");
@@ -72,28 +75,28 @@ const Homepage = () => {
         <div>
           {/* <ServerGet /> */}
 
-
-          {/* <div>
-        <LandingPage />
-        </div> */}
+          <div>
+        {/* <LandingPage /> */}
+        </div>
           <Herocard />
           <StoryPage />
           {/* <Portfolio /> */}
 
           {/* {landingPageLoaded ? ( */}
           <>
-
-
+            {/* <Services /> */}
             <Events />
             <Showreel />
             <div className="bg-gradient-to-t from-black via-transparent">
               <BiggestDroneShow />
             </div>
-            {/* <Animation /> */}
-            <div className="bg-black" >
+            <Animation />
+            <div className="bg-black">
               <Testimonials />
               <Client />
               <Form />
+              <GetUser />
+              
             </div>
           </>
           {/* ) : (
