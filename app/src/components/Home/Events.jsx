@@ -30,7 +30,7 @@ const Events = () => {
               {EventData.map((item, index) => (
                 <div className="" key={index}>
                   {/* <div className='w-40 border-l  leading-3 border-white'>
-d
+                  
                     </div> */}
 
                   <Link href={item.link}>
@@ -90,7 +90,7 @@ d
                     )}
                   </div>
                 </>
-              ))} */}
+              ))} */} 
 
               {EventData.map((item, index) => (
                 <div key={index}>

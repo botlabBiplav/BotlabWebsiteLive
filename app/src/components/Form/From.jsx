@@ -55,8 +55,6 @@ export default function Form() {
     //   return;
     // }
 
-    console.log("workingdtatftfytf", inpHandle);
-
     try {
       const response = await axios.post(
         "http://localhost:1337/api/contact-forms",

@@ -1,6 +1,6 @@
-import React from 'react';
-import Lottie from 'react-lottie';
-import animationData from '../public/your-animation.json'; // Path to your Lottie JSON file
+import React from "react";
+import Lottie from "react-lottie";
+import animationData from "../public/your-animation.json";
 
 const LottieLoader = () => {
   const defaultOptions = {
@@ -8,8 +8,8 @@ const LottieLoader = () => {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   return (

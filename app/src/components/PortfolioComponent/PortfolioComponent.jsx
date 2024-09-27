@@ -1,7 +1,4 @@
 import Image from "next/image";
-// import ViewImg from "../../../../Images/Image/view.png"
-// import ReachImg from "../../../../Images/Image/reach.png"
-// import ShareImg from "../../../../Images/Image/share.png"
 import PortfolioData from "../../../Data/PortfolioData";
 import LightGallery from "lightgallery/react";
 import { useRef, useState, useCallback, useEffect } from "react";
@@ -16,12 +13,12 @@ import lgVideo from "lightgallery/plugins/video";
 import "./PortfolioComponent.css";
 
 const PortfolioComponent = () => {
-  const lightGallery = useRef(null);
+  
   return (
     <div className="mt-44 3xl:mt-64 w-fit">
       {PortfolioData.map((item, index) => (
         <div key={index} className="mb-10">
-          {/* Conditional Rendering Based on Available Data */}
+
           <div className="xl:ml-72 md:ml-48 xl:w-auto lg:w-full md:w-full">
             {item.Title && (
               <h1 className="text-[#F5F5F5] 3xl:text-8xl xl:text-4xl lg:text-3xl md:text-3xl font-lexend">
@@ -50,7 +47,6 @@ const PortfolioComponent = () => {
             )}
           </div>
 
-          {/* Rendering Project Overview Details */}
           <div className=" xl:ml-72 md:ml-48 xl:w-auto lg:w-full md:w-full 3xl:mt-16">
             {item.Title1 && (
               <h1 className="text-[#8409FF] 3xl:text-6xl xl:text-7xl lg:text-7xl md:text-7xl font-golden-hopes">
@@ -119,7 +115,7 @@ const PortfolioComponent = () => {
               </div>
             )}
           </div>
-          {/* Media Rendering */}
+
           {item.vidUrl && (
             <div className="xl:ml-72 md:ml-48 xl:w-auto lg:w-full md:w-full mt-5">
               <iframe
@@ -303,8 +299,6 @@ const PortfolioComponent = () => {
             )}
           </div>
 
-          {/* {here need to image} */}
-
           <div className="">
             {item.subtitle7 && (
               <h1 className="text-[#F5F5F5] 3xl:text-5xl 3xl:space-x-96 text-3xl mt-10 xl:justify-center xl:mr-44 lg:ml-44 lg:text-center md:ml-44 md:text-center font-lexend">
@@ -425,203 +419,7 @@ const PortfolioComponent = () => {
       ))}
     </div>
   );
+
 };
 
 export default PortfolioComponent;
-
-{
-  /* Icons and Achievements */
-}
-{
-  /* {item.icons1 && (
-                        <div className="flex space-x-4">
-                            {item.icons1.map((icon, idx) => (
-                                <div key={idx} className="text-center">
-                                    <img src={icon.img} alt={icon.name1} />
-                                    <p className="text-white">{icon.count1}</p>
-                                    <p className="text-gray-400">{icon.name1}</p>
-                                </div>
-                            ))}
-                        </div>
-                    )} */
-}
-
-// PortfolioData.map((item, index) => (<>
-//     <div className="flex justify-center xl:mr-96 mr-0 bg-red-500">
-//         <div>
-//             <h1 className="text-white lg:text-4xl text-xl font-lexend">{item.Title}</h1>
-//             <h1 className="text-white lg:text-4xl text-xl font-lexend">{item.Title0}</h1>
-//             <h1 className="text-gray-400 mt-1">{item.subtitle}</h1>
-//             <h1 className="text-white text-[12px] mt-1">{item.eventPlace}</h1>
-//             <h1 className="text-gray-400 text-[12px]">{item.eventDate}</h1>
-//         </div>
-//     </div>
-//     <div className="ml-[280px]">
-//         <div className="">
-//             <h1 className="text-white text-2xl font-lato">{item.Title1}</h1>
-//             <div className="">
-//                 <span className="text-white flex text-[15px] ml-12 mt-3 mr-24">{item.Clientname}<p className="text-gray-400">{item.Client}</p></span>
-//                 <span className="text-white flex text-[15px] ml-12 mt-1">{item.Industryname}<p className="text-gray-400 items-center">{item.Industry}</p></span>
-//                 <span className="text-white flex text-[15px] ml-12 mt-1">{item.Eventname}<p className="text-gray-400 items-center">{item.Event}</p></span>
-//                 <span className="text-white flex text-[15px] ml-12 mt-1">{item.Locationname}<p className="text-gray-400 items-center">{item.Location}</p></span>
-//                 <span className="text-white flex text-[15px] ml-12 mt-1">{item.dronesname}<p className="text-gray-400 items-center">{item.drones}</p></span>
-//                 <span className="text-white flex text-[15px] ml-12 mt-1">{item.Reachname}<p className="text-gray-400 items-center">{item.Reach}</p></span>
-//             </div>
-//         </div>
-//     </div>
-//     <div className="ml-28 mt-5 flex justify-center">
-//         <iframe className="flex justify-center w-[1000px] h-[500px] aspect-video" src={item.vidUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-//     </div>
-//     <div className="ml-80">
-//         <h1 className="text-gray-400 text-[17px]">{item.Title11}</h1>
-//         <h1 className="text-white text-[25px]">{item.Title2}</h1>
-//         <ul>
-//             <li className="text-gray-400 text-[14px] font-lexend">{item.subtitle1}</li>
-//             <li className="text-gray-400 text-[14px] font-lexend">{item.subtitle2}</li>
-//         </ul>
-//     </div>
-//     <div className="ml-80">
-//         <h1 className="text-gray-400 text-[17px]">{item.Title12}</h1>
-//         <h1 className="text-white text-[25px]">{item.Title3}</h1>
-//         <p className="text-gray-400 font-lexend text-[15px] w-2/3">{item.subtitle3}</p>
-//         <p className="text-gray-400 font-lexend text-[15px] w-2/3">{item.subtitle4}</p>
-//     </div>
-//     <div className="ml-96">
-//         <h1 className="text-white text-[25px]">{item.Title4}</h1>
-//         <p className="text-gray-400 font-lexend text-[15px] w-2/3">{item.description1}</p>
-//     </div>
-//     <div>
-//         <h1 className="text-white text-2xl font-lato ml-80 text-[25px]">{item.Title5}</h1>
-//         <div className="">
-//             <span className="text-white flex text-[15px] ml-80 mt-1">{item.Languagesname}<p className="text-gray-400">{item.Languages}</p></span>
-//             <span className="text-white flex text-[15px] ml-80 mt-1">{item.Tonename}<p className="text-gray-400 items-center">{item.Tone}</p></span>
-//             <p className="text-gray-400 items-center ml-80 mt-5">{item.description2}</p>
-//         </div>
-//     </div>
-//     <div>
-//         <h1 className="text-white text-2xl font-lato ml-80 text-[25px]">{item.Title6}</h1>
-//         <div className="">
-//             <p className="text-gray-400 items-center ml-80 w-2/3">{item.description3}</p>
-//         </div>
-//     </div>
-//     <div>
-//         <div className="ml-24">
-//             <h1 className="text-white text-2xl font-lato ml-80 text-[25px]">{item.Title7}</h1>
-//             <div className="">
-//                 <p className="text-gray-400 items-center ml-80 ">{item.description4}</p>
-//             </div>
-//         </div>
-
-//         <div className="mt-10 ml-80">
-//             <p className="text-gray-400 items-center w-2/3">{item.subtitle5}</p>
-//         </div>
-//         <div className="ml-80">
-//             <p className="text-gray-400 items-center mt-5  w-2/3">{item.subtitle6}</p>
-//         </div>
-//     </div>
-//     <div className="ml-80 mt-5">
-//         <div>
-//             <h1 className="text-gray-400 text-[17px]">{item.Titlename}</h1>
-//             <h1 className="text-white text-[25px]">{item.Title8}</h1>
-//         </div>
-//     </div>
-//     <div className="mt-10 ml-96">
-//         <h1 className="text-white text-[30px]">{item.subtitle7}</h1>
-//         <div className="flex mt-10">
-//             <span className="">
-//                 <Image
-//                     src={item.img}
-//                     width={100}
-//                     height={100}
-//                 />
-//                 <h1 className="text-white text-center">{ }</h1>
-//                 <h1 className="text-white text-center">{ }</h1>
-//             </span>
-//             <span className="">
-//                 <Image
-//                     src={item.img1}
-//                     width={100}
-//                     height={100}
-//                     className="ml-52"
-//                 />
-//                 <div className="ml-52">
-//                     <h1 className="text-white text-center">{ }</h1>
-//                     <h1 className="text-white text-center">{ }</h1>
-//                 </div>
-//             </span>
-//             <span className="">
-//                 <Image
-//                     src={item.img2}
-//                     width={100}
-//                     height={100}
-//                     className="ml-52"
-//                 />
-//                 <div className="ml-52">
-//                     <h1 className="text-white text-center">{ }</h1>
-//                     <h1 className="text-white text-center">{ }</h1>
-//                 </div>
-//             </span>
-//         </div>
-//     </div>
-//     <div className="mt-20">
-//         <h1 className="text-white flex justify-center text-[30px]"></h1>
-//         <div className="flex mt-10">
-//             <span className="">
-//                 <Image
-//                     src={item.img}
-//                     width={100}
-//                     height={100}
-//                     className="ml-96"
-
-//                 />
-//                 <div className="ml-96">
-//                     <h1 className="text-white text-center">-</h1>
-//                     <h1 className="text-white text-center"></h1>
-//                 </div>
-//             </span>
-//             <span className="">
-//                 <Image
-//                     src={item.img1}
-//                     width={100}
-//                     height={100}
-//                     className="ml-52"
-//                 />
-//                 <div className="ml-52">
-//                     <h1 className="text-white text-center">-</h1>
-//                     <h1 className="text-white text-center"></h1>
-//                 </div>
-//             </span>
-//             <span className="">
-//                 <Image
-//                     src={item.img2}
-//                     width={100}
-//                     height={100}
-//                     className="ml-52"
-//                 />
-//                 <div className="ml-52">
-//                     <h1 className="text-white text-center">-</h1>
-//                     <h1 className="text-white text-center"></h1>
-//                 </div>
-//             </span>
-//         </div>
-//     </div>
-//     <div className="mt-5 flex justify-cente ml-80">
-//         <div>
-//             <h1 className="text-gray-400 text-[17px]">{item.Title9name}</h1>
-//             <h1 className="text-white text-[25px]">{item.Title9}</h1>
-//             <h1 className="text-gray-400 w-2/3">{ }</h1>
-//             <br />
-//             <h1 className="text-gray-400 mt-[1px] w-2/3">{ }</h1>
-//             <br />
-//             <h1 className="text-gray-400 mt-[1px] w-2/3">{ }</h1>
-//         </div>
-//     </div>
-
-//     <div className="ml-80 mt-10">
-//         <div>
-//             <h1 className="text-white text-xl font-lexend">{ }</h1>
-//             <h1 className="text-gray-400 text-[12px]">{ }</h1>
-//             <h1 className="text-gray-400 text-[12px]">{ }</h1>
-//         </div>
-//     </div>
-// </>))

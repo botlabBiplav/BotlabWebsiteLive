@@ -44,29 +44,9 @@ const App = () => {
   }, [loading]);
   return (
     <div>
-      {/* {loading ? (
-        <div style={{ textAlign: 'center', padding: '20px' }}>
-            <p>Loading...</p>
-        </div>
-    ) : (
+      <div className="transition-opacity duration-700 ease-in-out">
         <Homepage />
-    )} */}
-      {/* opacity-0 transition-opacity duration-500 ease-in-out */}
-
-      {/* {loading ? (
-        <div className="flex justify-center items-center align-middle  h-screen transition-opacity duration-700 ease-in-out  ">
-          <Image
-            src={loadingdata}
-            alt="Description of your image"
-            width={250}
-            height={250}
-            className=""
-          />
-        </div>
-      ) : ( */}
-        <div className="transition-opacity duration-700 ease-in-out">
-          <Homepage />
-        </div>
+      </div>
       {/* )} */}
     </div>
   );

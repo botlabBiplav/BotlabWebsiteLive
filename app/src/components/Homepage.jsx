@@ -22,6 +22,8 @@ import Herocard from "./Home/Herocard";
 // import Portfolio from "./Home/Portfolio";
 import Showreel from "./Home/Showreel";
 import BiggestDroneShow from "./Home/BiggestDroneShow";
+// import PortfolioGalleryComponent from "../components/PortfolioGalleryComponent/PortfolioGallery"
+// import PortfolioGallery from "./Home/PortfoiliGallery"
 // import AboutUs from "./AboutUsPage/AboutsUs";
 // import CareesPage from "./Home/CareesPage"
 // import CareesPage from "./CareersPage/CareersPage";
@@ -94,6 +96,8 @@ const Homepage = () => {
             {/* <Animation /> */}
             <div className="bg-black" >
               <Testimonials />
+              {/* <PortfolioGalleryComponent/> */}
+              {/* <PortfolioGallery/> */}
               {/* <AboutUs /> */}
               <Client />
               {/* <Form /> */}

@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const CanvasComponent = ({
   radiusIncrease = 0.5,
-  glowColor = '#fff',
+  glowColor = "#fff",
   glowOpacity = 0.5,
   glowSize = 20,
   breathingSpeed = 0.005,
 }) => {
   useEffect(() => {
-    const canvas = document.getElementById('canvas');
-    const context = canvas.getContext('2d');
+    const canvas = document.getElementById("canvas");
+    const context = canvas.getContext("2d");
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 
-    const colors = ['#fff'];
+    const colors = ["#fff"];
     const dotsHolder = [];
 
     const dots = function () {
@@ -25,7 +25,7 @@ const CanvasComponent = ({
       this.radiusDirection = 1; // Consistent direction
       this.glowOpacity = glowOpacity;
       this.glowSize = glowSize;
-      this.breathingSpeed = Math.random() * (breathingSpeed) + (breathingSpeed / 2); // Random speed
+      this.breathingSpeed = Math.random() * breathingSpeed + breathingSpeed / 2; // Random speed
       this.vx = Math.cos(this.baseRadius) / 6;
       this.vy = Math.sin(this.baseRadius) / 6;
     };
@@ -38,7 +38,10 @@ const CanvasComponent = ({
 
         // Breathing effect: increase/decrease radius with random speed
         dot.currentRadius += dot.radiusDirection * dot.breathingSpeed;
-        if (dot.currentRadius >= dot.baseRadius + radiusIncrease || dot.currentRadius <= dot.baseRadius - radiusIncrease) {
+        if (
+          dot.currentRadius >= dot.baseRadius + radiusIncrease ||
+          dot.currentRadius <= dot.baseRadius - radiusIncrease
+        ) {
           dot.radiusDirection *= -1; // Toggle direction
         }
 
@@ -54,11 +57,26 @@ const CanvasComponent = ({
         context.fillStyle = dot.color;
         dot.xPos += dot.vx;
         dot.yPos += dot.vy;
-        if (dot.xPos < -50) { dot.xPos = canvas.width + 50; }
-        if (dot.yPos < -50) { dot.yPos = canvas.height + 50; }
-        if (dot.xPos > canvas.width + 50) { dot.xPos = -50; }
-        if (dot.yPos > canvas.height + 50) { dot.yPos = -50; }
-        context.arc(dot.xPos, dot.yPos, dot.currentRadius, 0, 2 * Math.PI, false);
+        if (dot.xPos < -50) {
+          dot.xPos = canvas.width + 50;
+        }
+        if (dot.yPos < -50) {
+          dot.yPos = canvas.height + 50;
+        }
+        if (dot.xPos > canvas.width + 50) {
+          dot.xPos = -50;
+        }
+        if (dot.yPos > canvas.height + 50) {
+          dot.yPos = -50;
+        }
+        context.arc(
+          dot.xPos,
+          dot.yPos,
+          dot.currentRadius,
+          0,
+          2 * Math.PI,
+          false
+        );
         context.fill();
       }
     };
@@ -75,12 +93,17 @@ const CanvasComponent = ({
     /* REQUEST ANIMATION FRAME POLYFILL */
     (function () {
       let lastTime = 0;
-      const vendors = ['ms', 'moz', 'webkit', 'o'];
-      for (let x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+      const vendors = ["ms", "moz", "webkit", "o"];
+      for (
+        let x = 0;
+        x < vendors.length && !window.requestAnimationFrame;
+        ++x
+      ) {
+        window.requestAnimationFrame =
+          window[vendors[x] + "RequestAnimationFrame"];
         window.cancelAnimationFrame =
-          window[vendors[x] + 'CancelAnimationFrame'] ||
-          window[vendors[x] + 'CancelRequestAnimationFrame'];
+          window[vendors[x] + "CancelAnimationFrame"] ||
+          window[vendors[x] + "CancelRequestAnimationFrame"];
       }
 
       if (!window.requestAnimationFrame) {

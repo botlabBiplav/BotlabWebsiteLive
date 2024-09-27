@@ -64,11 +64,11 @@ const StoryPage = () => {
                   Emabark on a journey into the future of art, entertainment and
                   advertising with our flexible and scable drone shows,
                   meticulously customized to elevate your unique theme
-                </p>{" "}
+                </p>
               </div>
             </div>
           </div>
-        </div>{" "}
+        </div>
       </div>
 
 
