@@ -6,7 +6,7 @@ import brandlogo from "../../../../Images/Logos/wordmarkWhite.png";
 
 const HeaderBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };

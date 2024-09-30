@@ -8,7 +8,8 @@
 // import Footer from "../app/src/components/Footer/Footer";
 // import layout from "../app/layout";
 
-// const ContactUs = () => {
+// const ContactUs = ({params}) => {
+//     console.log("aboutparams",params)
 //     const [landingPageLoaded, setLandingPageLoaded] = useState(false);
 //     const API_URL = process.env.NEXT_PUBLIC_API_URL;
   
