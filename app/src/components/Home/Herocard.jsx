@@ -4,7 +4,8 @@ import endpointData from "../../../api/endpointData";
 import useGetRequest from "../../../api/UseGetRequest";
 import IsrFetch from "../../../api/IsrFetch";
 
-const Herocard = () => {
+const Herocard = ({ getData }) => {
+  console.log(getData, "dataFetch");
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -105,37 +106,35 @@ const Herocard = () => {
         </>
       ))} */}
 
-      { data?.map((item) => (
-        <>
-          <div className="relative h-screen w-full overflow-hidden bg-transparent">
-            <video
-              src={`${
-                API_URL + item.attributes.backgroundVideo.data[0].attributes.url
-              }`}
-              autoPlay
-              muted
-              loop
-              disablePictureInPicture
-              className="absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
-            />
+      {getData?.map((item, index) => (
+        <div key={index} className="relative h-screen w-full overflow-hidden bg-transparent">
+          <video
+            src={`${
+              API_URL + item.attributes.backgroundVideo.data[0].attributes.url
+            }`}
+            autoPlay
+            muted
+            loop
+            disablePictureInPicture
+            className="absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
+          />
 
-            <div className="relative z-10 flex flex-col sm:justify-end justify-center md:pb-8 sm:max-lg:pl-20 lg:pl-80 px-10 sm:items-start items-center h-full">
-              <div className="sm:text-left text-center text-white">
-                <h1 className="text-white sm:text-7xl pb-4 text-4xl font-lexend sm:w-auto">
-                  {item.attributes.title}
-                  <br />{" "}
-                  <p
-                    id="typewriter"
-                    className="font-golden-hopes sm:text-[13rem] text-7xl sm:text-[#8409FF]"
-                  >
-                    {" "}
-                    {text}&nbsp;
-                  </p>
-                </h1>
-              </div>
+          <div className="relative z-10 flex flex-col sm:justify-end justify-center md:pb-8 sm:max-lg:pl-20 lg:pl-80 px-10 sm:items-start items-center h-full">
+            <div className="sm:text-left text-center text-white">
+              <h1 className="text-white sm:text-7xl pb-4 text-4xl font-lexend sm:w-auto">
+                {item.attributes.title}
+                <br />{" "}
+                <p
+                  id="typewriter"
+                  className="font-golden-hopes sm:text-[13rem] text-7xl sm:text-[#8409FF]"
+                >
+                  {" "}
+                  {text}&nbsp;
+                </p>
+              </h1>
             </div>
           </div>
-        </>
+        </div>
       ))}
     </>
   );

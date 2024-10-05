@@ -11,6 +11,8 @@ const BiggestDroneShow = () => {
 
   if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
 
+  
+
   return (
     <>
       {/* <div className="relative h-[260vh]"> */}

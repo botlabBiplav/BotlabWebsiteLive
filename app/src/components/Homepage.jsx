@@ -78,7 +78,7 @@ const Homepage = () => {
           <div>
         {/* <LandingPage /> */}
         </div>
-          <Herocard />
+          {/* <Herocard /> */}
           <StoryPage />
           {/* <Portfolio /> */}
 

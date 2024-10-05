@@ -8,7 +8,7 @@ const endpointData = {
   showreel: "/api/showreals/",
   biggestdroneshows: "/api/biggestdroneshows",
   experienceIntegration : "/api/experience-integrations",
-  client: "/api/clientsdata"
+  client: "/api/clientsdata",
 };
 
 // use populate=* if you want images

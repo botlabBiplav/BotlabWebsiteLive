@@ -8,18 +8,34 @@ import useGetRequest from "../../../api/UseGetRequest";
 import endpointData from "../../../api/endpointData";
 import Link from "next/link";
 
-const Events = () => {
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const token = process.env.NEXT_PUBLIC_BEARER_TOKEN;
+
+const fetchAppData = async () => {
+  const res = await fetch(`${API_URL}${endpointData.featuredShows}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    next: { revalidate: 10 }, // Revalidate every 10 seconds
+  });
+  const data = await res.json();
+  return data.data;
+};
+
+
+const Events = async() => {
   const [hoveredIndex, setHoveredIndex] = useState(0);
-  const { data, loading, error } = useGetRequest(endpointData.featuredShows);
-  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+  // const { data, loading, error } = useGetRequest(endpointData.featuredShows);
+  // const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-  console.log(endpointData.featuredShows, "finddata");
+  // console.log(endpointData.featuredShows, "finddata");
 
-  if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
+  // if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
 
-  if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
+  // if (error) return <p>Error: {error.message}</p>; // Show error message if request fails\
 
-  console.log(data, "eventdata");
+  const data = await fetchAppData();
 
   return (
     <>
@@ -33,14 +49,12 @@ const Events = () => {
 d
                     </div> */}
 
-                  <Link href="/">
                     <Button
                       onMouseEnter={() => setHoveredIndex(index)}
                       className="font-lexend font-light tracking-widest btn lg:!w-72 !w-60 lg:!text-lg !text-sm lg:py-8 mt-5 text-white"
                     >
                       {item.attributes.buttonTitle}
                     </Button>
-                  </Link>
                 </div>
               ))}
               {/* strapi integration */}
@@ -91,6 +105,7 @@ d
                   </div>
                 </>
               ))} */}
+
 
               {data.map((item, index) => (
                 <div key={index}>

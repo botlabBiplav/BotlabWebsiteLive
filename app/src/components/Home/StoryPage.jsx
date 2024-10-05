@@ -6,15 +6,16 @@ import SimpleParallax from "simple-parallax-js";
 import useGetRequest from "../../../api/UseGetRequest";
 import endpointData from "../../../api/endpointData";
 
-const StoryPage = () => {
-  const { data, loading, error } = useGetRequest(endpointData.storyPage);
-  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const StoryPage = ({getData}) => {
 
-  if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
+  // const { data, loading, error } = useGetRequest(endpointData.storyPage);
+  // const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-  if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
+  // if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
 
-  console.log(data, "storypage ");
+  // if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
+
+  // console.log(data, "storypage ");
   return (
     <>
       {/* <div className="relative h-[260vh]"> */}
@@ -31,7 +32,7 @@ const StoryPage = () => {
         {/* ------------------> */}
         <div className="text-white lg:text-6xl bg-gradient-to-b from-black">
           <div className="pb-10 sm:pt-40">
-            {data.map((item, index) => (
+            {getData?.map((item, index) => (
               <div key={index}>
                 {item.id == 1 && (
                   <div className="flex justify-start lg:mx-80 mx-10 select-none">
