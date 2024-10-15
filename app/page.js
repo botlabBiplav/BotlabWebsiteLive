@@ -52,8 +52,7 @@ export default async function Home() {
     <main>
       <div className="z-10">
         <Background />
-        // <Herocard getData={hero} />
-        // <StoryPage getData={story} />
+       
             <DroneType />
 
       </div>
