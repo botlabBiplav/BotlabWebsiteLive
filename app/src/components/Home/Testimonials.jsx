@@ -7,6 +7,7 @@ import Autoplay from "embla-carousel-autoplay";
 import UseGetRequest from "../../../api/UseGetRequest";
 import endpointData from "../../../api/endpointData";
 
+
 import {
   Carousel,
   CarouselContent,
@@ -21,18 +22,18 @@ const Testimonials = () => {
     Autoplay({ delay: 4500, stopOnInteraction: false })
   );
 
-  // const { data, loading, error } = UseGetRequest(endpointData.testimonials);
+  const { data, loading, error } = UseGetRequest(endpointData.testimonials);
 
-  // if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
+  if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
 
-  // if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
-  // console.log(data, "dataGGT");
+  if (error) return <p>Error: {error.message}</p>; // Show error message if request fails
+  console.log(data, "dataGGT");
   return (
     <>
       <div className="pt-40">
         <div>
           {/* <h1 className="text-center text-white lg:text-6xl text-4xl font-lexend">
-            WHAT PEOPLE SAY ABOUT US
+            WHAT PEOPLE SAY ABOUT US [0].attributes.profileImg.data[0].attributes.url
           </h1> */}
         </div>
 
@@ -43,25 +44,29 @@ const Testimonials = () => {
           >
             <CarouselContent type={"ClientUI"}>
 
-              {Testimonialdata.map((item, index) => (
+              {data.map((item, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  {console.log(item.attributes.profileImg.data,'this is a itemdata')}
                   <div className="p-1">
                     <Card className="border-none bg-gray-800/45 backdrop-blur-sm">
                       <CardContent className="flex items-center justify-center p-6">
                         <div className="card text-white ">
                           <div className='xl:h-[500px] h-[240px] flex flex-col justify-between'>
-                            <p className="mt-10 lg:text-3xl text-base px-10 font-lato font-light">{item.testimonial}</p>
+                            <p className="mt-10 lg:text-3xl text-base px-10 font-lato font-light">{item.attributes.description}</p>
                             <div className='flex mb-10 px-7 mt-10 align-top'>
                               <Image
                                 height={100}
                                 width={100}
-                                src={item.peopleImg}
-                                alt={item.imagealt}
-                                className="!w-1/3 object-cover h-48 shadow-[15px_15px_0_rgba(132,9,255,0.4)] "
+                                src={`${
+                                  API_URL + 
+                                  item.attributes.profileImg.data[0].attributes
+                                    .url
+                                }`}                                alt={item.imagealt}
+                                className="!w-1/3 object-cover h-48  "
+                                // shadow-[15px_15px_0_rgba(132,9,255,0.4)]
                               />
                               <div className='ml-16 mt-10 w-1/2'>
-                                <p className="font-golden-hopes text-6xl text-[#8409FF]">{item.name}</p>
-                                {/* <p className="xl:text-2xl  lg:text-base text-sm font-lexend">{item.subtitle}</p> */}
+                                <p className="font-golden-hopes text-6xl text-[#8409FF]">{item.attributes.name}</p>
                               </div>
                             </div>
 
@@ -73,7 +78,7 @@ const Testimonials = () => {
                   </div>
                 </CarouselItem>
               ))}
-              {/* strapi integration */}
+              {/* strapi integration */}  
               {/* {data.map((item, index) => (
                 <CarouselItem
                   key={index}

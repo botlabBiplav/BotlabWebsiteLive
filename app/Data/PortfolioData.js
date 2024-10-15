@@ -81,7 +81,7 @@ const PortfolioData = [
         ], Title13: "DRONE SHOW SPECIFIC POSTS"
     },
     { Title9: "Appraisal", Title9name: "The", subtitle8: "Drone light shows inspire great curiosity and awe from Non-Resident Indians and global audiences, as proven by the huge audience that tuned in to watch the live broadcast of the show as well as measurably high online engagement across all social media platforms.", subtitle9: "Additionally, despite not aiming to draw an organic crowd, large numbers gathered at the nearby mall market front, with even shop owners and workers pausing their work to watch the entire show. Drone light shows have tremendous potential as a guerilla marketing strategy characterised by high on-ground engagement even with minimal pre-marketing as well as significant online buzz within a 4 km radius due to a show’s high visibility.", subtitle20: "Drone light shows are the next step in experiential storytelling, and can both serve as an immersive showstopper bookending a cutting-edge campaign or as a stand-alone event creating a novel, high-impact brand activation." },
-    { Title10: "ADDITIONAL RELEVENT MEDIA", subtitle10: "Case Study", subtitle11: "Video" }
+    { Title10: "ADDITIONAL RELEVENT MEDIA", subtitle10: "Case Study", subtitle11: "Video" },
 ];
 
 export default PortfolioData;

@@ -38,7 +38,7 @@ const Creative = () => {
           list.map((item, index) => (<>
             {index == count && <>
 
-              <div className='flex  justify-between items-center'>
+              <div key={index} className='flex  justify-between items-center'>
                 <h1 className='text-4xl ml-20'>{item.title}</h1>
                 <p className='w-[400px] text-2xl ml-40'>{item.description}</p>
               </div>
