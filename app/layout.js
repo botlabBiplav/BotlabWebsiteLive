@@ -39,26 +39,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-      
-  
-      </head>
-      <body className={inter.className}>
-
-
-        <div className="fixed w-full top-0 z-[150]">
-          
-        </div>
-
-
-        <main className="pt-20">
-          {children}
-        </main>
-
-        <div className="">
-          
-        </div>
-      </body>
+     
     </html>
   );
 }
