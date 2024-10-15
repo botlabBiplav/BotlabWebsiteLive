@@ -1,7 +1,6 @@
 import React from "react";
 import videodata from "../../../../Images/Image/herosectionbackground.webm";
 import endpointData from "../../../api/endpointData";
-import useGetRequest from "../../../api/UseGetRequest";
 
 const Herocard = ({ getData }) => {
   console.log(getData, "dataFetch");
