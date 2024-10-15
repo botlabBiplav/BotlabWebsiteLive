@@ -1,65 +1,63 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import videodata from "../../../../Images/Image/herosectionbackground.webm";
 import endpointData from "../../../api/endpointData";
 import useGetRequest from "../../../api/UseGetRequest";
-import IsrFetch from "../../../api/IsrFetch";
 
 const Herocard = ({ getData }) => {
   console.log(getData, "dataFetch");
-  const [text, setText] = useState("");
-  const [wordIndex, setWordIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
+  // const [text, setText] = useState("");
+  // const [wordIndex, setWordIndex] = useState(0);
+  // const [charIndex, setCharIndex] = useState(0);
+  // const [isDeleting, setIsDeleting] = useState(false);
+  // const [isPaused, setIsPaused] = useState(false);
 
-  useEffect(() => {
-    const words = ["Storytelling", "Entertainment", "Advertising"];
+  // useEffect(() => {
+  //   const words = ["Storytelling", "Entertainment", "Advertising"];
 
-    const typingSpeed = 70; // Speed of typing in milliseconds
-    const pauseDuration = 1000; // Pause duration in milliseconds after typing
+  //   const typingSpeed = 70; // Speed of typing in milliseconds
+  //   const pauseDuration = 1000; // Pause duration in milliseconds after typing
 
-    const typeEffect = () => {
-      const currentWord = words[wordIndex];
+  //   const typeEffect = () => {
+  //     const currentWord = words[wordIndex];
 
-      if (isDeleting) {
-        // Handle the deleting phase
-        setText(currentWord.substring(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
-        if (charIndex === 0) {
-          setIsDeleting(false);
-          setIsPaused(false); // Start pause after deleting completes
-        }
-      }
-      if ((isDeleting) => false) {
-        // Handle the typing phase
-        setText(currentWord.substring(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-        if (charIndex === currentWord.length) {
-          setIsPaused(true); // Ensure pause state is reset
-          setCharIndex(0); // Reset character index for the next word
-          setWordIndex((prevIndex) => (prevIndex + 1) % words.length); // Move to the next word
-        }
-      }
-    };
+  //     if (isDeleting) {
+  //       // Handle the deleting phase
+  //       setText(currentWord.substring(0, charIndex - 1));
+  //       setCharIndex(charIndex - 1);
+  //       if (charIndex === 0) {
+  //         setIsDeleting(false);
+  //         setIsPaused(false); // Start pause after deleting completes
+  //       }
+  //     }
+  //     if ((isDeleting) => false) {
+  //       // Handle the typing phase
+  //       setText(currentWord.substring(0, charIndex + 1));
+  //       setCharIndex(charIndex + 1);
+  //       if (charIndex === currentWord.length) {
+  //         setIsPaused(true); // Ensure pause state is reset
+  //         setCharIndex(0); // Reset character index for the next word
+  //         setWordIndex((prevIndex) => (prevIndex + 1) % words.length); // Move to the next word
+  //       }
+  //     }
+  //   };
 
-    const intervalId = setInterval(
-      () => {
-        if (isPaused) {
-          // Handle the pause duration after typing
-          setIsPaused(false); // Reset pause status to start deleting
-          setIsDeleting(true);
-        } else {
-          typeEffect();
-        }
-      },
-      isDeleting ? typingSpeed : isPaused ? pauseDuration : typingSpeed
-    );
+  //   const intervalId = setInterval(
+  //     () => {
+  //       if (isPaused) {
+  //         // Handle the pause duration after typing
+  //         setIsPaused(false); // Reset pause status to start deleting
+  //         setIsDeleting(true);
+  //       } else {
+  //         typeEffect();
+  //       }
+  //     },
+  //     isDeleting ? typingSpeed : isPaused ? pauseDuration : typingSpeed
+  //   );
 
-    return () => clearInterval(intervalId);
-  }, [charIndex, isDeleting, wordIndex, isPaused]);
+  //   return () => clearInterval(intervalId);
+  // }, [charIndex, isDeleting, wordIndex, isPaused]);
 
   // const { data, loading, error } = useGetRequest(endpointData.heroSection);
-  const { data, error } = IsrFetch(endpointData.heroSection);
 
   // [0].attributes.title
 
@@ -124,13 +122,13 @@ const Herocard = ({ getData }) => {
               <h1 className="text-white sm:text-7xl pb-4 text-4xl font-lexend sm:w-auto">
                 {item.attributes.title}
                 <br />{" "}
-                <p
+                {/* <p
                   id="typewriter"
                   className="font-golden-hopes sm:text-[13rem] text-7xl sm:text-[#8409FF]"
                 >
                   {" "}
                   {text}&nbsp;
-                </p>
+                </p> */}
               </h1>
             </div>
           </div>
