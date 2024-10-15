@@ -39,26 +39,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* <title>BotLab Dynamics | India's Leading Drone Show Company</title> */}
-        {/* Add meta tags and links if necessary */}
-      </head>
-      <body className={inter.className}>
 
-
-        <div className="fixed w-full top-0 z-[150]">
-          <HeaderBar />
-        </div>
-
-
-        <main className="pt-20">
-          {children}
-        </main>
-
-        <div className="">
-          <Footer />
-        </div>
-      </body>
     </html>
   );
 }
