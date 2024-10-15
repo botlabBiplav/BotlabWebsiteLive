@@ -2,7 +2,7 @@ import { withNextVideo } from "next-video/process";
 import withVideos from "next-videos"
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: 'export',
+    output: 'export',
     images: {
         unoptimized: true
     }
