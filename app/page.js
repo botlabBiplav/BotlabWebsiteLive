@@ -4,7 +4,7 @@
 import App from "./App"; // Adjust the import according to your structure
 import endpointData from "./api/endpointData";
 import Herocard from "./src/components/Home/Herocard";
-import StoryPage from "./src/components/Home/StoryPage";
+// import StoryPage from "./src/components/Home/StoryPage";
 import { revalidatePath } from "next/cache";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 const token = process.env.NEXT_PUBLIC_BEARER_TOKEN;
