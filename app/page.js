@@ -16,6 +16,8 @@ const fetchDataServerSide = async (endpoint) => {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
+       next: { tags: ['posts'] }, 
+       cache: 'no-store',
     });
 
     // Check the status code and log detailed response if not OK
