@@ -47,7 +47,7 @@ export default function Home() {
     return (
       <main>
         <div className="z-10">
-          <h1 className="text-white text-2xl mt-20">This is working fine</h1>
+          <h1 className="text-white text-2xl mt-20">This is working</h1>
           {/* <Background />
           <Herocard getData={hero} />
           <StoryPage getData={story} /> */}
