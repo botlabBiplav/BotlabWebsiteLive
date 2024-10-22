@@ -11,38 +11,38 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 const token = process.env.NEXT_PUBLIC_BEARER_TOKEN;
 // Fetch data from your API with ISR
 // here we are implemented the isr on-demand revalidation using webhook
-// const fetchData = (endpoint) => {
-//   return fetch(`${API_URL}${endpoint}`, {
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//       "Content-Type": "application/json",
-//     },
-//     next: { tags: ['posts'] }, // Use tags for webhook integration
-//     cache: 'no-store',
-//   })
-//   .then((res) => {
-//     if (!res.ok) {
-//       throw new Error(`Failed to fetch ${endpoint}`);
-//     }
-//     return res.json();
-//   })
-//   .then((data) => data.data);
-// };
+const fetchData = (endpoint) => {
+  return fetch(`${API_URL}${endpoint}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    next: { tags: ['posts'] }, // Use tags for webhook integration
+    cache: 'no-store',
+  })
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error(`Failed to fetch ${endpoint}`);
+    }
+    return res.json();
+  })
+  .then((data) => data.data);
+};
 
 
-// const fetchAppData = () => {
-//   return Promise.all([
-//     fetchData(endpointData.heroSection),
-//     fetchData(endpointData.storyPage),
-//   ])
-//   .then(([hero, story]) => {
-//     return { hero, story };
-//   });
-// };
+const fetchAppData = () => {
+  return Promise.all([
+    fetchData(endpointData.heroSection),
+    fetchData(endpointData.storyPage),
+  ])
+  .then(([hero, story]) => {
+    return { hero, story };
+  });
+};
 
 export default function Home() {
-  // return fetchAppData().then(({ hero, story }) => {
-  //   console.log(story, 'herosectiondata');
+  return fetchAppData().then(({ hero, story }) => {
+    console.log(story, 'herosectiondata');
 
     return (
       <main>
@@ -54,6 +54,6 @@ export default function Home() {
         </div>
       </main>
     );
-  // });
+  });
 }
 
