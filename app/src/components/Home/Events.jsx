@@ -11,20 +11,20 @@ import Link from "next/link";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 const token = process.env.NEXT_PUBLIC_BEARER_TOKEN;
 
-const fetchAppData = async () => {
-  const res = await fetch(`${API_URL}${endpointData.featuredShows}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-    next: { revalidate: 10 }, // Revalidate every 10 seconds
-  });
-  const data = await res.json();
-  return data.data;
-};
+// const fetchAppData = async () => {
+//   const res = await fetch(`${API_URL}${endpointData.featuredShows}`, {
+//     headers: {
+//       Authorization: `Bearer ${token}`,
+//       "Content-Type": "application/json",
+//     },
+//     next: { revalidate: 10 }, // Revalidate every 10 seconds
+//   });
+//   const data = await res.json();
+//   return data.data;
+// };
 
 
-const Events = async() => {
+const Events =() => {
   const [hoveredIndex, setHoveredIndex] = useState(0);
   // const { data, loading, error } = useGetRequest(endpointData.featuredShows);
   // const API_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -35,7 +35,7 @@ const Events = async() => {
 
   // if (error) return <p>Error: {error.message}</p>; // Show error message if request fails\
 
-  const data = await fetchAppData();
+  // const data = await fetchAppData();
 
   return (
     <>
@@ -43,7 +43,7 @@ const Events = async() => {
         <div className="  lg:h-[500px]">
           <div className="flex sm:flex-row flex-col ">
             <div className="mt-1">
-              {data.map((item, index) => (
+              {EventData.map((item, index) => (
                 <div className="" key={index}>
                   {/* <div className='w-40 border-l  leading-3 border-white'>
 d

@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import parallaxImg from "../../../../public/Dots.png";
 import Image from "next/image";

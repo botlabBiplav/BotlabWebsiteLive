@@ -1,8 +1,9 @@
+"use client"
 import React, { useState, useEffect } from "react";
 import videodata from "../../../../Images/Image/herosectionbackground.webm";
 import endpointData from "../../../api/endpointData";
 import useGetRequest from "../../../api/UseGetRequest";
-import IsrFetch from "../../../api/IsrFetch";
+// import IsrFetch from "../../../api/IsrFetch";
 
 const Herocard = ({ getData }) => {
   console.log(getData, "dataFetch");
@@ -59,7 +60,7 @@ const Herocard = ({ getData }) => {
   }, [charIndex, isDeleting, wordIndex, isPaused]);
 
   // const { data, loading, error } = useGetRequest(endpointData.heroSection);
-  const { data, error } = IsrFetch(endpointData.heroSection);
+  // const { data, error } = IsrFetch(endpointData.heroSection);
 
   // [0].attributes.title
 
