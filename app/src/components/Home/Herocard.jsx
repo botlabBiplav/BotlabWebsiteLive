@@ -60,7 +60,10 @@ const Herocard = ({ getData }) => {
 
   // [0].attributes.title
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+  // const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+  const API_URL = "https://isrbranch.d106165hbqr1jn.amplifyapp.com";
+
 
   // if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
 
