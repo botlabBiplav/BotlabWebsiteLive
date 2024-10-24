@@ -3,7 +3,6 @@ import videodata from "../../../../Images/Image/herosectionbackground.webm";
 import endpointData from "../../../api/endpointData";
 
 const Herocard = ({ getData }) => {
-  console.log(getData, "dataFetch");
   // const [text, setText] = useState("");
   // const [wordIndex, setWordIndex] = useState(0);
   // const [charIndex, setCharIndex] = useState(0);
@@ -60,9 +59,8 @@ const Herocard = ({ getData }) => {
 
   // [0].attributes.title
 
-  // const API_URL = process.env.NEXT_PUBLIC_API_URL;
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-  const API_URL = "http://18.237.25.44:1337";
 
 
   // if (loading) return <p>Loading...</p>; // Show loading indicator while fetching data
@@ -132,6 +130,8 @@ const Herocard = ({ getData }) => {
                   {text}&nbsp;
                 </p> */}
               </h1>
+                            <h1 className="text-white text-3xl">checking :- {API_URL + item.attributes.backgroundVideo.data[0].attributes.url}</h1>
+
             </div>
           </div>
         </div>
