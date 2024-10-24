@@ -107,11 +107,9 @@ const Herocard = ({ getData }) => {
       {getData?.map((item, index) => (
         <div key={index} className="relative h-screen w-full overflow-hidden bg-transparent">
           <video
-{/*             src={`${
+            src={`${
               API_URL + item.attributes.backgroundVideo.data[0].attributes.url
-            }`} */}
-                      src="http://18.237.25.44:1337/uploads/botlab_745814cf21.webm"
-
+            }`}
             autoPlay
             muted
             loop
